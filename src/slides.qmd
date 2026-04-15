@@ -19,9 +19,6 @@ authors:
 - The repository can then also be hosted a remote service (e.g. GitHub, GitLab, Codeberg, Bitbucket)
 - This will make collaboration with other people a lot easier!
 
-$-- Since git will be covered during the week we shouldn't need to do too much
-$-- here.
-
 # Documentation
 
 - README
