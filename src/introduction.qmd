@@ -1,0 +1,12 @@
+## Introduction: What is reproducibility?
+
+- Reproducing results
+- Portability
+
+## A likely scenario
+
+- You have just joined a new research group as a Student/Researcher/PI.
+- The group use a custom pipeline/setup to perform their data analysis/simulations.
+- You try to get the setup working on your local system/a new hpc system and...
+    It doesn't work!
+

@@ -1,24 +1,23 @@
 ---
 title: Reproducibility in Scientific Computing
-authors: Jack Franklin & Marion Weinzierl
+
+format:
+  revealjs:
+    theme: dark
+
+authors:
+  - name: Jack Franklin
+  - name: Marion Weinzierl
 ---
 
-# Introduction: What is reproducibility?
-- Reproducing results
-- Portability
-- 
-
-# A likely scenario
-
-- You have just joined a new research group as a Student/Researcher/PI.
-- The group use a custom pipeline/setup to perform their data analysis/simulations.
-- You try to get the setup working on your local system/a new hpc system and...
-    It doesn't work!
+{{< include introduction.qmd >}}
 
 # Version Control
 
-- First put things into VC
+- First put things into version control
 - Then any changes/fixes can be tracked
+- The repository can then also be hosted a remote service (e.g. GitHub, GitLab, Codeberg, Bitbucket)
+- This will make collaboration with other people a lot easier!
 
 $-- Since git will be covered during the week we shouldn't need to do too much
 $-- here.
