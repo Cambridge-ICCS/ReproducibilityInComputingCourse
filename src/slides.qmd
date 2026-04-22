@@ -3,7 +3,8 @@ title: Reproducibility in Scientific Computing
 
 format:
   revealjs:
-    theme: dark
+    theme: night
+    logo: https://iccs.cam.ac.uk/sites/default/files/iccs_ucam_combined_reverse_colour.png
 
 authors:
   - name: Jack Franklin
