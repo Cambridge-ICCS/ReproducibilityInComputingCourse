@@ -1,0 +1,5 @@
+## Dependencies
+
+- Basic documentation
+- Project files (e.g. project.toml for python etc)
+- System dependencies (nix/guix/docker?)

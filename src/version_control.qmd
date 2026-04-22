@@ -1,0 +1,11 @@
+## Version Control
+
+- The first thing we should do is move our project into version control
+
+---
+
+- The repository can then also be hosted a remote service (e.g. GitHub, GitLab, Codeberg, Bitbucket)
+- This will make collaboration with other people a lot easier!
+  - It will also mean that any work done can be accessed 
+
+

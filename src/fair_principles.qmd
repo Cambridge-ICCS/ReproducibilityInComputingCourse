@@ -1,0 +1,10 @@
+## FAIR Principles
+- Findability
+- Accessibility
+- Interoperability
+- Reuse
+
+$-- Maybe we should look at this retrospectively, and see what elements we covered and
+$-- where we could improve on.
+$-- Also a good way to talk about why these are good principles to start a project with
+$-- since we can show that they avoid most/all the problems that we had to solve
