@@ -1,14 +1,29 @@
-## Introduction: What is reproducibility?
+## What is reproducibility?
 
-There are different, conflicting definitions of what reproducibility is.
-However, for this course we will take the following definition:
+For this course we will take the following definition:
 
-*Reproducible*: Performing the same analysis on the same data produces the same 
-results
+- *Reproducible*:
+  Performing the same analysis on the same data produces the same results
 
+## Why is reproducibility important?
 
+In the context of scientific computing/analysis, we want to be able to:
+
+- Verify our own results
+- Verify the results of others
+
+By making our work reproducible, we ensure that both these things are not just
+possible, but straightforward
+
+## Additional benefits
+
+- Safely implement changes
+- Can perform workflow on different inputs more easily
+- Simpler for new team members to get started
+- Better collaboration
 
 ## Where do we go from here...
 
 Throughout the rest of this session, we will walk through the steps that we can
-take to an ad-hoc collection of scripts into a reproducible scientific workflow
+take to go from an ad hoc collection of scripts into a reproducible scientific 
+workflow!
