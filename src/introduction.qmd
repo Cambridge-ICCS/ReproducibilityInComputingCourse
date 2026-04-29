@@ -1,12 +1,19 @@
 ## Introduction: What is reproducibility?
 
-- Reproducing results
-- Portability
+There are different, conflicting definitions of what reproducibility is.
+However, for this course we will take the following definition:
+
+*Reproducible*: Performing the same analysis on the same data produces the same 
+results
 
 ## A likely scenario
 
 - You have just joined a new research group as a Student/Researcher/PI.
 - The group use a custom pipeline/setup to perform their data analysis/simulations.
 - You try to get the setup working on your local system/a new hpc system and...
-    It doesn't work!
+    *It doesn't work!*
 
+## Where do we go from here...
+
+Throughout the rest of this session, we will walk through the steps that we can
+take to an ad-hoc collection of scripts into a reproducible scientific workflow
