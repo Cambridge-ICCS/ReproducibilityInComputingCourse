@@ -29,6 +29,17 @@ it will be true.
 - Use .gitignore to automatically ignore any unwanted files
   - e.g. build outputs
 
+## Aside - testing with worktrees
+
+- git worktrees are like "local clones" of a repository
+- Create a worktree:
+``` bash
+git worktree add -b <new-branch-name> <path>
+```
+- Will make a new directory, with only files that are tracked
+- Can use as a cleanroom to ensure all dependencies are there
+- For more info: `git worktree add --help`
+
 ## What to do next?
 
 - The repository can then also be hosted a remote service (e.g. GitHub, GitLab, Codeberg, Bitbucket)
