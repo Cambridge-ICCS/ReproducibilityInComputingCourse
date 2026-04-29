@@ -1,5 +1,37 @@
 ## Dependencies
 
-- Basic documentation
-- Project files (e.g. project.toml for python etc)
+- All software has dependencies
+- Some are more obvious than others:
+  - Data/input
+  - Packages/libraries e.g. numpy, Eigen
+  - System libraries
+  - Compiler/Interpreter
+- If your code can't run without it, it's a dependency!
+
+## How to discover dependencies
+
+- Some dependencies may be "implicit"
+- For example, you may have a library installed on your system
+- Since the code "just works", you may not be aware of the dependency
+- To find these, try running on a different system (or multiple) and see what breaks
+
+## How to declare dependencies
+
+- List them in a tracked file in the repository
+  - e.g. add a "Dependencies" section to your README.md
+- Specify:
+  - Versions of each dependency e.g. numpy 2.3.9
+  - Where/how to aquire the dependency
+
+## Dependency metadata
+
+- There are automated ways of resolving dependencies
+- Usually language/tool specific
+- Some tools automatically update dependency metadata
+  - e.g. Rust's cargo, Julia's Pkg, uv for Python
+  - Project file: Depencies and compatible versions
+  - Lock file: Write exact version (plus other metadata e.g. source) of *every* 
+    dependency you are using
+  - Important to track both - lock files record the exact environment you use
+
 - System dependencies (nix/guix/docker?)
