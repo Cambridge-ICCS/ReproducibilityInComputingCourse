@@ -1,11 +1,35 @@
 ## Version Control
 
 - The first thing we should do is move our project into version control
+- This way we never lose the original state of the project
+- We can then try things without worrying about breaking anything!
+- This will also benefit any later development, so the sooner the better
 
----
+## What to add to VC
+
+- DON'T do this:
+``` bash
+git add .
+```
+
+- Our repository should only contain:
+  - Code/scripts
+  - Documentation
+  - Metadata
+  - i.e. just text files
+
+There will be some exceptions to this rule, but for the vast majority of cases
+it will be true.
+
+## What to add to VC
+
+- If you have large datafiles that are needed for your work, you should host
+  them separately (e.g. on Zenodo) and link to them in your repository
+
+## What to do next?
 
 - The repository can then also be hosted a remote service (e.g. GitHub, GitLab, Codeberg, Bitbucket)
 - This will make collaboration with other people a lot easier!
-  - It will also mean that any work done can be accessed 
+- It will also mean that any work done can be accessed by collaborators
 
 
