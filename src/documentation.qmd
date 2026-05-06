@@ -1,6 +1,30 @@
+# Documentation
+
 ## Documentation
 
-- README
-- User Docs
-- Dev Docs
-- Comments?
+- Not all information can be conveyed in code
+- We need to tell other people how to use our projects
+- And sometimes ourselves!
+- Documentation covers anything outside of the code/metadata
+
+## README
+
+- Markdown file at the project root
+- Should contain:
+  - Description of project
+  - Dependencies
+  - Instructions on building/running
+
+## Comments
+
+- Comments in code are also another form of documentation
+- Comments should:
+  - Explain *why* the code is doing something
+  - Give context that is external to the scope
+
+## Generating Docs
+
+- Use tools that generate docs from source code
+- Single source of truth
+- Comments/Docstrings embedded in code
+- Reduce separation between code and docs
