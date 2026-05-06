@@ -1,6 +1,8 @@
+# Version Control
+
 ## Version Control
 
-- The first thing we should do is move our project into version control
+- The first thing we should do is move our project into version control (VC)
 - This way we never lose the original state of the project
 - We can then try things without worrying about breaking anything!
 - This will also benefit any later development, so the sooner the better

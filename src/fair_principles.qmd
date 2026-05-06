@@ -1,12 +1,23 @@
-## FAIR Principles
+# FAIR Principles
+
+---
 
 - Findable: Software, and it's metadata, are easy for humans and machines to
   find.
+
+---
+
 - Accessible: Software, and it's metadata, are retrievable via standardised
   protocols.
+
+---
+
 - Interoperable: Software interoperates with other software by exchanging
   data and/or metadata, and/or through interaction via a application
   programming interfaces (APIs), described through standards.
+
+---
+
 - Reusable: Software is both usable (can be executed) and reusable (can be
   understood, modified, built upon, or incorporated into other software).
 
