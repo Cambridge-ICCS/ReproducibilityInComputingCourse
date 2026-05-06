@@ -34,4 +34,8 @@
     dependency you are using
   - Important to track both - lock files record the exact environment you use
 
-- System dependencies (nix/guix/docker?)
+## System dependencies
+
+- Conda
+- Docker
+- Nix/Guix
