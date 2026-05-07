@@ -24,6 +24,8 @@ authors:
 
 {{< include fair_principles.qmd >}}
 
+{{< include reproducibility_initiatives.qmd >}}
+
 # Conclusion/Outlook
 
 ## Reproducibility is important
