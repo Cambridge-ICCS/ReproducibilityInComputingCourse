@@ -1,0 +1,57 @@
+---
+title: Reproducibility in Scientific Computing
+
+format:
+  revealjs:
+    theme: night
+    logo: https://iccs.cam.ac.uk/sites/default/files/iccs_ucam_combined_reverse_colour.png
+
+authors:
+  - name: Jack Franklin
+  - name: Marion Weinzierl
+---
+
+{{< include introduction.qmd >}}
+
+{{< include version_control.qmd >}}
+
+{{< include dependencies.qmd >}}
+
+{{< include testing.qmd >}}
+
+{{< include documentation.qmd >}}
+
+{{< include fair_principles.qmd >}}
+
+# Conclusion/Outlook
+
+## Reproducibility is important
+
+Primary benefits:
+- Confidence in scientific results
+- Peer review/cross analysis
+
+Additional benefits:
+- Allows for code resuse
+- Better collaboration
+
+## Ingredients for reproducibility:
+
+- Version Control
+- Dependency Metadata
+- Public Accessibility
+
+## Even better if
+
+- Testing for:
+  - Verification
+  - Regression checks
+
+## Make it easy!
+
+- When starting from scratch, much easier to implement these as you go
+- For a large project:
+  - Add to VC
+  - Document dependencies
+  - Follow best practice for new code
+  - Implement small improvements whenever modifying
