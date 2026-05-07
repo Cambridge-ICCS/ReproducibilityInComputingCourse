@@ -1,4 +1,4 @@
-<img src="./images/UCAM_ICCS_Logo.png"  width="600">
+<img src="ICCS_logo.png"  width="600">
 
 # Reproducibility in Computing
 
