@@ -7,7 +7,7 @@ designed and delivered by Jack Franklin and Marion Weinzierl of [ICCS](https://g
 All materials, including slides and videos, are available such that individuals can cover the
 course in their own time.
 
-A website for this workshop can be found at TODO: provide link.
+A website for this workshop can be found at https://cambridge-iccs.github.io/ReproducibilityInComputingCourse/.
 
 
 ## Contents
@@ -28,7 +28,7 @@ and basic tools to improve it.
 ## Teaching Material
 
 ### Slides
-The slides for this workshop can be viewed here: TODO: provide link
+The slides for this workshop can be viewed on the [website of this course](https://cambridge-iccs.github.io/ReproducibilityInComputingCourse/).
 
 ### Exercises
 
