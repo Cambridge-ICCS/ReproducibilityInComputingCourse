@@ -25,6 +25,16 @@ authors:
 
 # Conclusion/Outlook
 
+## Reproducibility is important
+
+Primary benefits:
+- Confidence in scientific results
+- Peer review/cross analysis
+
+Additional benefits:
+- Allows for code resuse
+- Better collaboration
+
 ## Ingredients for reproducibility:
 
 - Version Control
