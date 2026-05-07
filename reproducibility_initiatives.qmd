@@ -36,7 +36,7 @@ thing (internationally).
 
 - Conferences, events, seminars open to everyone
 
-![](img/RIOT_principles.png){width=70%}
+![](img/RIOT_principles.png){width=60%, fig-align="center"}
 
 ---
 
@@ -80,9 +80,7 @@ first years -> used in Student Cluster Competition
 
 --- 
 
-## ReproHack {.smaller}
-
-![](img/reprohack_logo.jpg){width=3cm} 
+## ![](img/reprohack_logo.jpg){width=5%}  ReproHack {.smaller}
 
 - Challenge: Reproduce the results of a paper in one day!
 
