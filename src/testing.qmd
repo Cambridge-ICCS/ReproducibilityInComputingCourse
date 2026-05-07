@@ -1,0 +1,45 @@
+# Testing
+
+## Testing
+
+- Important to test code
+- Check that code does what it should
+- Test on inputs outside of the "normal" range
+- Verify that results of code do not change
+- Can also be used to check dependency changes
+
+## Unit tests
+
+- Test the smallest logical unit of the code
+- Ensure each component works as intended
+- Test functions for known results
+- Compare to previously produced results
+
+## Integration tests
+
+- Test that components work together
+- Try to have a range of complexity of tests
+- Can use previous results to validate model
+- Ensure no regression of results
+
+## Adding tests to a project
+
+- Often we inherit large projects with no unit tests
+- How do we improve test coverage in this case?
+
+## Adding tests to a project
+
+  1. Create integration tests - use previous results or create "golden outputs"
+  2. Identify and extract parts of the code which can be split apart
+  3. Create unit tests for the new functions
+  4. Run the integration tests to ensure results have not changed
+  5. Repeat 2-4 until all code has unit tests
+
+- Whenever you change a part of the code, try to use this method
+- Code coverage will slowly improve, with less extra work
+
+## Automating tests (CI etc)
+
+- Automate testing to ensure tests pass for every commit
+- Also useful for tests that can take a long time/need lots of resources
+- If hosting code on e.g. GitHub, GitLab etc, can use Continuous Integration (CI)
