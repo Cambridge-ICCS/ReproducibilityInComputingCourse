@@ -8,17 +8,21 @@
     - that results of code do not change with code changes
     - that the code still works after dependency changes
     - that the code works for edge cases 
+
 ---
+
 ## Testing and Reproducibility
 
 - Tests are your "reproducibility insurance"
+
 - Flags (hopefully) when something is dodgy in your codebase
     - Find the problems before someone else does!
+
 - Improve reliability and trustworthyness
 
 ---
 
-A very short intro to testing
+## A very short intro to testing
 
 ---
 
