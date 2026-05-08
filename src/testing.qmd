@@ -13,7 +13,7 @@
 
 - Tests are your "reproducibility insurance"
 - Flags (hopefully) when something is dodgy in your codebase
-    - Find the problems before someone else does...
+    - Find the problems before someone else does!
 - Improve reliability and trustworthyness
 
 ---
