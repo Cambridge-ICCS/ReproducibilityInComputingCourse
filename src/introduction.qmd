@@ -1,11 +1,32 @@
 ## What is reproducibility?
 
-For this course we will take the following definition:
+\
 
-- *Reproducible*:
-  Performing the same analysis on the same data produces the same results
+In scientific research, a result is:
+
+:::{.columns}
+:::{.column width="50%"}
+
+- *reproducible* if performing the same analysis on the same dataset produces the 
+  same result
+- *replicable* if performing the same analysis on a different dataset produces 
+  qualitatively similar answers
+:::
+:::{.column width="50%}
+
+- *robust* if performing a different analysis (that tries to answer the same 
+  question) on the same dataset produces similar or identical answers
+- *generalisable* if we can run different analysis workflows on different 
+  datasets and get similar answers
+
+:::
+:::
+
+![](/img/reproducibility_matrix.jpg){width=50%, fig-align="center"}
 
 ## Why is reproducibility important?
+
+\
 
 In the context of scientific computing/analysis, we want to be able to:
 
@@ -13,17 +34,79 @@ In the context of scientific computing/analysis, we want to be able to:
 - Verify the results of others
 
 By making our work reproducible, we ensure that both these things are not just
-possible, but straightforward
+possible, but straightforward!
+
+## Reproducibility in Earth sciences
+\
+Poll of researchers in Earth sciences:
+![](/img/es_reproducibility_perception.jpg)
+
+![](/img/es_reproducibility_reasons_only.jpg)
+
+::: footer
+[R Reinecke et al (2022)](https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8)
+:::
+
+## Reproducibility in Earth sciences
+
+Other findings:
+
+- 82% of researchers are self taught programmers
+- 40% do not know who legally owns the code they are writing
+- More than 35% of respondents say it can take 2-3 weeks to train a new PhD with the
+  research software used by the group
+  - 23% said up to one year, 8% said more than a year!
+
+::: footer
+[R Reinecke et al (2022)](https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8)
+:::
 
 ## Additional benefits
 
-- Safely implement changes
-- Can perform workflow on different inputs more easily
-- Simpler for new team members to get started
-- Better collaboration
+- Reproducibility is not just for scientific results
+- By making our software more reproducible, we also get to reap the benefits!
+
+:::{.columns}
+:::{.column width="50%"}
+### Safely implement changes
+
+- Automation and testing help catch mistakes before they become an issue
+:::
+:::{.column width=50%}
+### Rerun analyses
+
+- Better documentation to get started
+- Create reusable pipelines to need for manually running commands
+- Untangle data from code so analysis can run on different inputs
+:::
+:::
+
+:::{.columns}
+:::{.column width=50%}
+### Simpler for new team members to get started
+
+- Better documentation on how to use the software
+- Relevant metadata present - no hunting down dependencies
+:::
+:::{.column width=50%}
+### Better collaboration
+
+- Version control
+- Accessibility of code and data
+:::
+:::
 
 ## Where do we go from here...
+
 
 Throughout the rest of this session, we will walk through the steps that we can
 take to go from an ad hoc collection of scripts into a reproducible scientific 
 workflow!
+
+Reproducibility must haves:
+
+- Version Control
+- READMEs
+- Licenses
+- Automation
+- Testing
