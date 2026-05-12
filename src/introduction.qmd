@@ -24,6 +24,16 @@ In scientific research, a result is:
 
 ![](/img/reproducibility_matrix.jpg){width=50%, fig-align="center"}
 
+## What is reproducibility?
+
+For a result to be reproducible, it should be possible for someone else to:
+
+- Access your code
+- Obtain all the relevant data
+- Run the analysis defined by your code on the data and get the same result
+
+*Any time, anywhere!*
+
 ## Why is reproducibility important?
 
 \
@@ -75,8 +85,7 @@ Other findings:
 :::{.column width=50%}
 ### Rerun analyses
 
-- Better documentation to get started
-- Create reusable pipelines to need for manually running commands
+- Create reusable pipelines
 - Untangle data from code so analysis can run on different inputs
 :::
 :::
@@ -91,7 +100,7 @@ Other findings:
 :::{.column width=50%}
 ### Better collaboration
 
-- Version control
+- Version control for keeping track of code history
 - Accessibility of code and data
 :::
 :::
