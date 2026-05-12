@@ -1,0 +1,51 @@
+# Automation
+
+## Automation
+
+Automation is important in scientific computing:
+
+- It is common to have different workflows using one piece of software
+- Many different research artifacts may be produced from one analysis/dataset
+  - Figures, data files, statistical results etc.
+- Different people may need/want to create the same artifacts
+
+By automating tasks as much as possible, we make it easier to perform the actions
+and produce the results we want
+
+## Why automate?
+
+There are many benefits to automating workflows:
+
+- Faster
+- Code as instructions
+  - No need to write how to do X
+  - Can be tested!
+- Flexibility
+  - Improved control
+  - Extendable
+- Less chance of mistakes
+  - Computers are good at following instructions 
+
+## Automation and reproducibility
+
+- Automating workflows tracks how research artifacts were actually produced
+
+- Makes it easier for others to use and verify our work
+
+- Results are more trustworthy
+
+## How to automate
+
+- Bash scripts
+  - Common on HPC, works on all Linux machines
+  - Can easily use command line programs
+  - More complicated scripts can become verbose
+  - All variables are strings (lots of footguns)
+
+- Python scripts
+  - Much more "batteries included" e.g. argument parsing is built into the core library
+  - Access to python libraries
+  - Not always available, but will run on any machine with python installed
+  - Not as easy to invoke external programs
+
+- Scripts should be written like any other code!

@@ -6,6 +6,7 @@ format:
   revealjs:
     theme: night
     logo: https://iccs.cam.ac.uk/sites/default/files/iccs_ucam_combined_reverse_colour.png
+    fontsize: 1.5em
 
 authors:
   - name: Jack Franklin
@@ -17,6 +18,8 @@ authors:
 {{< include version_control.qmd >}}
 
 {{< include dependencies.qmd >}}
+
+{{< include automation.qmd >}}
 
 {{< include testing.qmd >}}
 
