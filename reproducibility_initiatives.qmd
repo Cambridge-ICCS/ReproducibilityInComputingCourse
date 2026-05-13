@@ -2,7 +2,7 @@
 
 ---
 
-## Efforts to improve software/research reproducibility {.smaller}
+## Efforts to improve software/research reproducibility
 
 - Various groups and organisations work for better reproducibility.
 
@@ -16,7 +16,7 @@ thing (internationally).
 
 ---
 
-## ![](img/ukrnlogo.jpeg){width=1.5cm}  UK Reproducibility Network {.smaller}
+## ![](img/ukrnlogo.jpeg){style="width:1.5cm; vertical-align:bottom;"}  UK Reproducibility Network
 
 - Peer-led consortium within the UK, international networks
 
@@ -30,32 +30,33 @@ thing (internationally).
 
 ---
 
-## ![](img/riots.png){width=1.5cm} RIOT Science {.smaller}
+## ![](img/riots.png){width=1.5cm} RIOT Science
 
 - Groups at universities (mostly Psychology, mostly UK)
-
 - Conferences, events, seminars open to everyone
 
-![](img/RIOT_principles.png){width=60%, fig-align="center"}
+![](img/RIOT_principles.png){style="width:80%; fig-align:center;"}
 
 ---
 
-## The Turing Way {.smaller}
+## The Turing Way
 
+:::{.columns}
+:::{.column width=30%}
+
+\
 
 - Handbook
-
 - Community
-
 - Collaboration
-
-&nbsp;
-
+:::
+:::{.column width=70%}
 ![](img/theturingway-pathway.png){width=80%, fig-align="center"} 
-
+:::
+:::
 ---
 
-## ![](img/acm.png){width=10%}  ACM Reproducibility Badges {.smaller}
+## ![](img/acm.png){width=10%}  ACM Reproducibility Badges
 
 &nbsp;
 
@@ -63,7 +64,7 @@ thing (internationally).
 
 ---
 
-## ![](img/sc26.png){width=10%} SC Reproducibility Initiative {.smaller}
+## ![](img/sc26.png){width=10%} SC Reproducibility Initiative
 
 - SC (formerly Supercomputing), The International Conference for High
 Performance Computing Networking, Storage, and Analysis
@@ -80,7 +81,7 @@ first years -> used in Student Cluster Competition
 
 --- 
 
-## ![](img/reprohack_logo.jpg){width=5%}  ReproHack {.smaller}
+## ![](img/reprohack_logo.jpg){width=5%}  ReproHack
 
 - Challenge: Reproduce the results of a paper in one day!
 
@@ -100,7 +101,7 @@ course by Owen Petchey)
 	
 ---
 
-## And more! {.smaller}
+## And more!
 
 - JOSS
 

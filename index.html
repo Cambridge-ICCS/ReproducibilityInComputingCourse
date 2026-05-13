@@ -97,7 +97,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-422092a5e00d6ffa3175d97bbb8f7ab9.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-7df0d300de292c7d42a0408035c04211.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -213,32 +213,104 @@ Marion Weinzierl
 </section>
 <section id="what-is-reproducibility" class="slide level2">
 <h2>What is reproducibility?</h2>
-<p>For this course we will take the following definition:</p>
+<p><br>
+</p>
+<p>In scientific research, a result is:</p>
+
+<img data-src="./img/reproducibility_matrix.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<p>We will use the definitions used in <a href="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/">The Turing Way</a></p>
+</div>
+</section>
+<section id="what-is-reproducibility-1" class="slide level2">
+<h2>What is reproducibility?</h2>
+<p>For a result to be reproducible, it should be possible for someone else to:</p>
 <ul>
-<li><em>Reproducible</em>: Performing the same analysis on the same data produces the same results</li>
+<li>Access your code</li>
+<li>Obtain all the relevant data</li>
+<li>Run the analysis defined by your code on the data and get the same result</li>
 </ul>
+<p><em>Any time, anywhere!</em></p>
 </section>
 <section id="why-is-reproducibility-important" class="slide level2">
 <h2>Why is reproducibility important?</h2>
+<p><br>
+</p>
 <p>In the context of scientific computing/analysis, we want to be able to:</p>
 <ul>
 <li>Verify our own results</li>
 <li>Verify the results of others</li>
 </ul>
-<p>By making our work reproducible, we ensure that both these things are not just possible, but straightforward</p>
+<p>By making our work reproducible, we ensure that both these things are not just possible, but straightforward!</p>
+</section>
+<section id="reproducibility-in-earth-sciences" class="slide level2">
+<h2>Reproducibility in Earth sciences</h2>
+<p><br>
+Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_perception.jpg"></p>
+<p><img data-src="./img/es_reproducibility_reasons_only.jpg"></p>
+<div class="footer">
+<p><a href="https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8">R Reinecke et al (2022)</a></p>
+</div>
+</section>
+<section id="reproducibility-in-earth-sciences-1" class="slide level2">
+<h2>Reproducibility in Earth sciences</h2>
+<p>Other findings:</p>
+<ul>
+<li>82% of researchers are self taught programmers</li>
+<li>40% do not know who legally owns the code they are writing</li>
+<li>More than 35% of respondents say it can take 2-3 weeks to train a new PhD with the research software used by the group
+<ul>
+<li>23% said up to one year, 8% said more than a year!</li>
+</ul></li>
+</ul>
+<div class="footer">
+<p><a href="https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8">R Reinecke et al (2022)</a></p>
+</div>
 </section>
 <section id="additional-benefits" class="slide level2">
 <h2>Additional benefits</h2>
 <ul>
-<li>Safely implement changes</li>
-<li>Can perform workflow on different inputs more easily</li>
-<li>Simpler for new team members to get started</li>
-<li>Better collaboration</li>
+<li>Reproducibility is not just for scientific results</li>
+<li>By making our software more reproducible, we also get to reap the benefits!</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="safely-implement-changes">Safely implement changes</h3>
+<ul>
+<li>Automation and testing help catch mistakes before they become an issue</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="rerun-analyses">Rerun analyses</h3>
+<ul>
+<li>Create reusable pipelines</li>
+<li>Untangle data from code so analysis can run on different inputs</li>
+</ul>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="faster-onboarding">Faster onboarding</h3>
+<ul>
+<li>Better documentation on how to use the software</li>
+<li>Relevant metadata present - no hunting down dependencies</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="better-collaboration">Better collaboration</h3>
+<ul>
+<li>Version control for keeping track of code history</li>
+<li>Accessibility of code and data</li>
+</ul>
+</div></div>
 </section>
 <section id="where-do-we-go-from-here" class="slide level2">
 <h2>Where do we go from here…</h2>
 <p>Throughout the rest of this session, we will walk through the steps that we can take to go from an ad hoc collection of scripts into a reproducible scientific workflow!</p>
+<p>Reproducibility must haves:</p>
+<ul>
+<li>Version Control</li>
+<li>READMEs</li>
+<li>Licenses</li>
+<li>Automation</li>
+<li>Testing</li>
+</ul>
 </section>
 <section>
 <section id="version-control" class="title-slide slide level1 center">
@@ -348,6 +420,27 @@ Marion Weinzierl
 </ul></li>
 </ul>
 </section>
+<section id="how-to-declare-data-dependencies" class="slide level2">
+<h2>How to declare data dependencies</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>Links to publicly accessible data dependencies
+<ul>
+<li>Zenodo or some other long term solution</li>
+</ul></li>
+<li>Reference specific versions of the data</li>
+<li>Ideally automate the fetching of the data</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/zenodo.jpg"></p>
+<figcaption>Example of a zenodo listing. Note how each version of the dataset has a different reference</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
 <section id="dependency-metadata" class="slide level2">
 <h2>Dependency metadata</h2>
 <ul>
@@ -362,12 +455,141 @@ Marion Weinzierl
 </ul></li>
 </ul>
 </section>
-<section id="system-dependencies" class="slide level2">
-<h2>System dependencies</h2>
+<section id="system-dependencies---conda" class="slide level2">
+<h2>System dependencies - Conda</h2>
 <ul>
-<li>Conda</li>
-<li>Docker</li>
-<li>Nix/Guix</li>
+<li>Python centric package manager</li>
+<li>Can be used for installing python packages</li>
+<li>Also able to manage environments
+<ul>
+<li>useful for per-project dependencies</li>
+<li>can install system dependencies</li>
+<li>even different python versions!</li>
+</ul></li>
+<li>Available on most HPC systems (usually as Miniconda)</li>
+<li>Can export environments to text-based files</li>
+</ul>
+</section>
+<section id="system-dependencies---containers" class="slide level2">
+<h2>System dependencies - Containers</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Containers package up code and all dependencies</li>
+<li>Virtualised operating system</li>
+<li>Faster than a virtual machine with many of the benefits</li>
+<li>Examples:
+<ul>
+<li>Docker (Closed source but popular)</li>
+<li>Podman (Open source alternative)</li>
+<li>Apptainer (HPC focused/compatible)</li>
+</ul></li>
+<li>Portable and cross-platform</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="img/docker-logo-ocean-blue.svg"> <img data-src="img/apptainer.svg"> <img data-src="img/podman-logo-source.svg"></p>
+</div></div>
+</section>
+<section id="system-dependencies---nixguix" class="slide level2">
+<h2>System dependencies - Nix/Guix</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>What they have in common:</p>
+<ul>
+<li>Declarative package managers</li>
+<li>Use pure functional languages to create environments
+<ul>
+<li>same inputs = same outputs</li>
+</ul></li>
+<li>Packages are hashed
+<ul>
+<li>can lookup if package already exists locally</li>
+</ul></li>
+<li>Publicly hosted and <em>versioned</em> package repository
+<ul>
+<li>All packages have defined and unchanging dependencies</li>
+</ul></li>
+<li>Handles all dependencies automatically
+<ul>
+<li>even linked libraries, so no hidden dependencies!</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p>How they differ:</p>
+<ul>
+<li>Nix language vs Guile scheme</li>
+<li>Guix package repository only hosts fully open source packages
+<ul>
+<li>Can be difficult when using vendor-locked software e.g.&nbsp;CUDA</li>
+</ul></li>
+</ul>
+</div></div>
+</section></section>
+<section>
+<section id="automation" class="title-slide slide level1 center">
+<h1>Automation</h1>
+
+</section>
+<section id="automation-1" class="slide level2">
+<h2>Automation</h2>
+<p>Automation is important in scientific computing:</p>
+<ul>
+<li>It is common to have different workflows using one piece of software</li>
+<li>Many different research artifacts may be produced from one analysis/dataset
+<ul>
+<li>Figures, data files, statistical results etc.</li>
+</ul></li>
+<li>Different people may need/want to create the same artifacts</li>
+</ul>
+<p>By automating tasks as much as possible, we make it easier to perform the actions and produce the results we want</p>
+</section>
+<section id="why-automate" class="slide level2">
+<h2>Why automate?</h2>
+<p>There are many benefits to automating workflows:</p>
+<ul>
+<li>Faster</li>
+<li>Code as instructions
+<ul>
+<li>No need to write how to do X</li>
+<li>Can be tested!</li>
+</ul></li>
+<li>Flexibility
+<ul>
+<li>Improved control</li>
+<li>Extendable</li>
+</ul></li>
+<li>Less chance of mistakes
+<ul>
+<li>Computers are good at following instructions</li>
+</ul></li>
+</ul>
+</section>
+<section id="automation-and-reproducibility" class="slide level2">
+<h2>Automation and reproducibility</h2>
+<ul>
+<li><p>Automating workflows tracks how research artifacts were actually produced</p></li>
+<li><p>Makes it easier for others to use and verify our work</p></li>
+<li><p>Results are more trustworthy</p></li>
+</ul>
+</section>
+<section id="how-to-automate" class="slide level2">
+<h2>How to automate</h2>
+<ul>
+<li>Bash scripts
+<ul>
+<li>Common on HPC, works on all Linux machines</li>
+<li>Can easily use command line programs</li>
+<li>More complicated scripts can become verbose</li>
+<li>All variables are strings (lots of footguns)</li>
+</ul></li>
+<li>Python scripts
+<ul>
+<li>Much more “batteries included” e.g.&nbsp;argument parsing is built into the core library</li>
+<li>Access to python libraries</li>
+<li>Not always available, but will run on any machine with python installed</li>
+<li>Not as easy to invoke external programs</li>
+</ul></li>
+<li>Scripts should be written like any other code!</li>
 </ul>
 </section></section>
 <section>
@@ -547,7 +769,7 @@ Marion Weinzierl
 <h1>Reproducibility Initiatives</h1>
 
 </section>
-<section id="efforts-to-improve-softwareresearch-reproducibility" class="slide level2 smaller">
+<section id="efforts-to-improve-softwareresearch-reproducibility" class="slide level2">
 <h2>Efforts to improve software/research reproducibility</h2>
 <ul>
 <li><p>Various groups and organisations work for better reproducibility.</p></li>
@@ -556,8 +778,8 @@ Marion Weinzierl
 <li><p>But still not widely known outside of the bubble!</p></li>
 </ul>
 </section>
-<section id="uk-reproducibility-network" class="slide level2 smaller">
-<h2><img data-src="img/ukrnlogo.jpeg" style="width:1.5cm"> UK Reproducibility Network</h2>
+<section id="uk-reproducibility-network" class="slide level2">
+<h2><img data-src="img/ukrnlogo.jpeg" style="width:1.5cm; vertical-align:bottom;"> UK Reproducibility Network</h2>
 <ul>
 <li><p>Peer-led consortium within the UK, international networks</p></li>
 <li><p>National Steering Group, local and institutional groups</p></li>
@@ -570,29 +792,34 @@ Marion Weinzierl
 </figure>
 </div>
 </section>
-<section id="riot-science" class="slide level2 smaller">
+<section id="riot-science" class="slide level2">
 <h2><img data-src="img/riots.png" style="width:1.5cm"> RIOT Science</h2>
 <ul>
-<li><p>Groups at universities (mostly Psychology, mostly UK)</p></li>
-<li><p>Conferences, events, seminars open to everyone</p></li>
+<li>Groups at universities (mostly Psychology, mostly UK)</li>
+<li>Conferences, events, seminars open to everyone</li>
 </ul>
+<p><img data-src="img/RIOT_principles.png" style="width:80%; fig-align:center;"></p>
+</section>
+<section id="the-turing-way" class="slide level2">
+<h2>The Turing Way</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><br>
+</p>
+<ul>
+<li>Handbook</li>
+<li>Community</li>
+<li>Collaboration</li>
+</ul>
+</div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/RIOT_principles.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/theturingway-pathway.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
+</div></div>
 </section>
-<section id="the-turing-way" class="slide level2 smaller">
-<h2>The Turing Way</h2>
-<ul>
-<li><p>Handbook</p></li>
-<li><p>Community</p></li>
-<li><p>Collaboration</p></li>
-</ul>
-<p>&nbsp;</p>
-
-<img data-src="img/theturingway-pathway.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="acm-reproducibility-badges" class="slide level2 smaller">
+<section id="acm-reproducibility-badges" class="slide level2">
 <h2><img data-src="img/acm.png" style="width:10.0%"> ACM Reproducibility Badges</h2>
 <p>&nbsp;</p>
 <div class="quarto-figure quarto-figure-center">
@@ -601,7 +828,7 @@ Marion Weinzierl
 </figure>
 </div>
 </section>
-<section id="sc-reproducibility-initiative" class="slide level2 smaller">
+<section id="sc-reproducibility-initiative" class="slide level2">
 <h2><img data-src="img/sc26.png" style="width:10.0%"> SC Reproducibility Initiative</h2>
 <ul>
 <li><p>SC (formerly Supercomputing), The International Conference for High Performance Computing Networking, Storage, and Analysis</p></li>
@@ -611,7 +838,7 @@ Marion Weinzierl
 <li><p>Reproducibility challenge introduced 2021</p></li>
 </ul>
 </section>
-<section id="reprohack" class="slide level2 smaller">
+<section id="reprohack" class="slide level2">
 <h2><img data-src="img/reprohack_logo.jpg" style="width:5.0%"> ReproHack</h2>
 <ul>
 <li><p>Challenge: Reproduce the results of a paper in one day!</p></li>
@@ -628,7 +855,7 @@ Marion Weinzierl
 </ul></li>
 </ul>
 </section>
-<section id="and-more" class="slide level2 smaller">
+<section id="and-more" class="slide level2">
 <h2>And more!</h2>
 <ul>
 <li><p>JOSS</p></li>

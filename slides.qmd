@@ -4,7 +4,7 @@ title: Reproducibility in Scientific Computing
 
 format:
   revealjs:
-    theme: night
+    theme: [dracula, custom.scss]
     logo: https://iccs.cam.ac.uk/sites/default/files/iccs_ucam_combined_reverse_colour.png
 
 authors:
@@ -17,6 +17,8 @@ authors:
 {{< include version_control.qmd >}}
 
 {{< include dependencies.qmd >}}
+
+{{< include automation.qmd >}}
 
 {{< include testing.qmd >}}
 

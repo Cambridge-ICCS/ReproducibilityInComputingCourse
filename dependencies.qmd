@@ -25,6 +25,20 @@
   - Versions of each dependency e.g. numpy 2.3.9
   - Where/how to aquire the dependency
 
+## How to declare data dependencies
+
+:::{.columns}
+:::{.column width="30%"}
+- Links to publicly accessible data dependencies
+  - Zenodo or some other long term solution
+- Reference specific versions of the data
+- Ideally automate the fetching of the data
+:::
+:::{.column width="70%"}
+![Example of a zenodo listing. Note how each version of the dataset has a different reference](img/zenodo.jpg)
+:::
+:::
+
 ## Dependency metadata
 
 - There are automated ways of resolving dependencies
@@ -36,8 +50,58 @@
     dependency you are using
   - Important to track both - lock files record the exact environment you use
 
-## System dependencies
+## System dependencies - Conda
 
-- Conda
-- Docker
-- Nix/Guix
+- Python centric package manager
+- Can be used for installing python packages
+- Also able to manage environments
+  - useful for per-project dependencies
+  - can install system dependencies
+  - even different python versions!
+- Available on most HPC systems (usually as Miniconda)
+- Can export environments to text-based files
+
+## System dependencies - Containers
+
+:::{.columns}
+:::{.column width="60%"}
+- Containers package up code and all dependencies
+- Virtualised operating system
+- Faster than a virtual machine with many of the benefits
+- Examples:
+  - Docker (Closed source but popular)
+  - Podman (Open source alternative)
+  - Apptainer (HPC focused/compatible)
+- Portable and cross-platform
+:::
+:::{.column width="40%"}
+![](img/docker-logo-ocean-blue.svg)
+![](img/apptainer.svg)
+![](img/podman-logo-source.svg)
+:::
+:::
+
+## System dependencies - Nix/Guix
+
+:::{.columns}
+:::{.column width="60%"}
+What they have in common:
+
+- Declarative package managers
+- Use pure functional languages to create environments
+  - same inputs = same outputs
+- Packages are hashed
+  - can lookup if package already exists locally
+- Publicly hosted and *versioned* package repository
+  - All packages have defined and unchanging dependencies
+- Handles all dependencies automatically
+  - even linked libraries, so no hidden dependencies!
+:::
+:::{.column width="40%"}
+How they differ:
+
+- Nix language vs Guile scheme
+- Guix package repository only hosts fully open source packages
+  - Can be difficult when using vendor-locked software e.g. CUDA
+:::
+:::
