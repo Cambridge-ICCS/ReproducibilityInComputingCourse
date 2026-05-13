@@ -78,7 +78,7 @@ Other findings:
 
 :::{.columns}
 :::{.column width=50%}
-### Simpler for new team members to get started
+### Faster onboarding
 
 - Better documentation on how to use the software
 - Relevant metadata present - no hunting down dependencies
