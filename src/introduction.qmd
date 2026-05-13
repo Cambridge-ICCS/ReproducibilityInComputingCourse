@@ -4,25 +4,11 @@
 
 In scientific research, a result is:
 
-:::{.columns}
-:::{.column width="50%"}
+![](/img/reproducibility_matrix.jpg){width=60%, fig-align="center"}
 
-- *reproducible* if performing the same analysis on the same dataset produces the 
-  same result
-- *replicable* if performing the same analysis on a different dataset produces 
-  qualitatively similar answers
+:::{.footer}
+We will use the definitions used in [The Turing Way](https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/)
 :::
-:::{.column width="50%}
-
-- *robust* if performing a different analysis (that tries to answer the same 
-  question) on the same dataset produces similar or identical answers
-- *generalisable* if we can run different analysis workflows on different 
-  datasets and get similar answers
-
-:::
-:::
-
-![](/img/reproducibility_matrix.jpg){width=50%, fig-align="center"}
 
 ## What is reproducibility?
 
