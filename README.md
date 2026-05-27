@@ -22,8 +22,9 @@ A website for this workshop can be found at https://cambridge-iccs.github.io/Rep
 
 ## Learning Objectives
 
-The key learning objective from this workshop is raise the awareness of the importance of software reproducibility, and give the participants and understanding
-and basic tools to improve it.
+The key learning objective from this workshop is to raise the awareness of the importance of software reproducibility, and give the participants an understanding
+and basic tools to improve it. We will do a whistle-stop tour through the basics of scientific software reproducibility, and touch on topics such as Version Control, READMEs,
+Licenses, Automation, Testing and the FAIR principles, and how those apply to software reproducibility.
 
 ## Teaching Material
 
