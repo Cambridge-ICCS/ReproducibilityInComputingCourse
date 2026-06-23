@@ -58,5 +58,9 @@ Additional benefits:
 - For a large project:
   - Add to VC
   - Document dependencies
+
+## ICCS Hacktoberfest 2026
+
+![](img/iccs_hacktoberfest_2026){width=80%, fig-align="center"}
   - Follow best practice for new code
   - Implement small improvements whenever modifying
