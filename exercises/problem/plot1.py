@@ -1,7 +1,7 @@
 import xarray
 import matplotlib.pyplot as plt
 
-ds = xarray.open_dataset("../data/CARS2009_temp20-40S_69-88W.nc")
+ds = xarray.open_dataset("../data/HadCRUT.5.0.0.0_analysis_summary-series_180E-0N-180W-30N_annual.nc")
 
-ds['temp'].plot()
+plt.fill_between(ds['time'].data, ds['tas_lower'].data, ds['tas_upper'])
 plt.show()
