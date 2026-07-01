@@ -1,7 +1,21 @@
 import xarray
 import matplotlib.pyplot as plt
 
-ds = xarray.open_dataset("../data/HadCRUT.5.0.0.0_analysis_summary-series_180E-0N-180W-30N_annual.nc")
+# Recreate the "warming stripes" visualisation
+# https://showyourstripes.info/
 
-plt.fill_between(ds['time'].data, ds['tas_lower'].data, ds['tas_upper'])
+ds = xarray.open_dataset("../data/HadCRUT.5.0.0.0_analysis_summary-series_global_annual.nc")
+
+fig, axs = plt.subplots(2, 1, figsize=(10,6), layout='constrained')
+
+x = ds['time'].data
+
+y_lower = ds['tas_lower'].data
+y = ds['tas_mean'].data
+y_upper = ds['tas_upper'].data
+
+axs[0].errorbar(x, y, yerr=[y - y_lower, y_upper - y])
+
+axs[1].pcolor(y.reshape(1, -1), cmap="seismic")
+
 plt.show()
