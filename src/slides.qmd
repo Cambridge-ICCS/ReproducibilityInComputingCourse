@@ -15,14 +15,19 @@ authors:
 {{< include introduction.qmd >}}
 
 {{< include version_control.qmd >}}
+{{< include ../exercises/version_control_exercises.qmd >}}
 
 {{< include dependencies.qmd >}}
+{{< include ../exercises/dependencies_exercises.qmd >}}
 
 {{< include automation.qmd >}}
+{{< include ../exercises/automation_exercises.qmd >}}
 
 {{< include testing.qmd >}}
+{{< include ../exercises/testing_exercises.qmd >}}
 
 {{< include documentation.qmd >}}
+{{< include ../exercises/documentation_exercises.qmd >}}
 
 {{< include fair_principles.qmd >}}
 
