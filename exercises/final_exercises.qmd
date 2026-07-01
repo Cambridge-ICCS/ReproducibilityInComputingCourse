@@ -1,0 +1,7 @@
+## Try it out!
+
+Tasks:
+
+1. Share your repository with the person near you
+2. Try to reproduce the results using the repo that you have been shared
+

@@ -1,0 +1,6 @@
+## Automation Exercises
+
+Tasks:
+
+1. Create an automated pipeline for producing all the figures
+2. Automate the fetching of the necessary data

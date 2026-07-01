@@ -1,0 +1,8 @@
+## Version Control Exercises
+
+Try to answer the following questions:
+
+1. Which files should be tracked?
+2. Are there any files in the project that should not be tracked?
+3. Are there any files missing that are needed to run the analysis?
+
