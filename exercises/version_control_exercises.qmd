@@ -1,8 +1,16 @@
 ## Version Control Exercises
 
-Try to answer the following questions:
+Hopefully, at this point in the week, you will all be comfortable with version control!
 
-1. Which files should be tracked?
-2. Are there any files in the project that should not be tracked?
-3. Are there any files missing that are needed to run the analysis?
+The exercises in this course will work on improving an example set of python scripts,
+to make them more reproducible!
 
+These scripts are hosted on the same GitHub repository as these slides:
+(https://github.com/Cambridge-ICCS/ReproducibilityInComputingCourse)
+Specifically in the directory `exercises/problem`.
+
+Tasks:
+
+1. Download the Python scripts from the GitHub repository
+2. Create a new git repository on your local machine
+3. Add the Python scripts to git for version control!
