@@ -1,6 +1,9 @@
 ## Automation Exercises
 
-Tasks:
+1. What tools/technologies could be used to automate producing the plots?
+2. How could we automatically fetch the data needed for the plots
+
+## Extension
 
 1. Create an automated pipeline for producing all the figures
 2. Automate the fetching of the necessary data
