@@ -1,11 +1,14 @@
 ## Dependencies exercises
 
-Try to answer the following questions:
+Returning to the Python scripts, try to answer the following questions:
 
-1. What are the python dependencies for the analysis? 
+1. What are the python dependencies? 
 2. What are the system dependencies?
-3. Data dependencies
+3. What are the data dependencies?
 
-Task: Document the dependencies that you find
-Extension: Using your favourite dependency management tool (e.g. Conda, Nix),
-create a reproducible environment configuration.
+### Extension
+
+Using your favourite dependency management tool (e.g. Conda, Nix), create a
+reproducible environment configuration to handle the python and system dependencies.
+
+Create a way to automatically fetch the data dependencies when using the scripts.
