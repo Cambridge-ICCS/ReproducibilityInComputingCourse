@@ -9,7 +9,7 @@ reproducibility into account.
 ## Data
 
 If you are trying to work through these exercises, you will need the data that
-the scripts rely on, which can be found here: https://doi.org/10.5281/zenodo.7014332.
+the scripts rely on, which can be found here: https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.0.0.0/download.html.
 
 ## Instructions:
 
