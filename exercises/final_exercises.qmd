@@ -2,6 +2,14 @@
 
 Tasks:
 
-1. Share your repository with the person near you
+1. Try running some of the worked examples in the repository
+  - Which ones work? Which do you find the easiest to use?
+
+### Extensions
+
+1. Share your repository with someone, see if they can reproduce the plotd
 2. Try to reproduce the results using the repo that you have been shared
+3. Try to use a different dataset (e.g. a different version of the HadCrut data)
+   - Does it work?
+   - What changes did you need to make?
 
