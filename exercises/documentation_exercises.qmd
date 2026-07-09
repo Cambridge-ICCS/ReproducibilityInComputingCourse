@@ -5,7 +5,7 @@ Tasks:
 1. Create a README for the repository
 2. Add comments and docstrings where you think is necessary
 
-## Extension
+### Extension
 
 Use an documentation tool, such as Sphinx, to automate building the
 documentation.
