@@ -33,16 +33,18 @@ The slides for this workshop can be viewed on the [website of this course](https
 
 ### Exercises
 
-TODO
+The exercises for this course are listed in the quarto markdown files which can be found in the [exercises](exercises/) directory. The tasks are
+divided into those that can be answered/solved during the session, and also "Extension" tasks which can be worked on outside of the session.
 
-The exercises for the course can be found in the [exercises](exercises/) directory.  
-These take the form of \<partially completed jupyter notebooks/downloadable code/online tasks or games etc.\>.
+There is a small group of python scripts in the [problem](exercises/problem/) sub-directory. These act as an example of a non-reproducible workflow. The tasks involve understanding and 
+improving the reproducibility of the scripts using what is covered in the session. It is recommended to download these scripts to a seperate location on your local machine for 
+this purpose.
 
 ### Worked Solution
-TODO
 
 Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
-These are for recapping after the course in case you missed anything, and contain example solutions.
+These cover the tasks that require any modifications/improvements to the example workflow provided. They are not exhaustive, but use common technologies and approaches
+to solving the tasks.
 
 ### Mini ReproHack
 
@@ -67,7 +69,11 @@ If you want to follow along with the exercises, basic Python coding skills and a
 
 ## Installation and setup
 
-TODO
+To complete the exercises, you will need to download the dataset used by the python scripts. This can be found [here](https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.0.0.0/download.html)
+As part of the exercises will be assessing the data dependencies of the scripts, it will be left as a task to find out which of the datasets you need!
+
+It is recommended to download the python scripts from [exercises/problem](exercises/problem/) to your local machine, in a new directory.
+This will allow you to develop the code as you would in practice.
 
 
 ## License
