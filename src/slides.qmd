@@ -12,6 +12,9 @@ authors:
   - name: Marion Weinzierl
 
 jupyter: python3
+
+execute:
+  cache: true
 ---
 
 {{< include introduction.qmd >}}
