@@ -35,9 +35,99 @@ possible, but straightforward!
 ## Reproducibility in Earth sciences
 \
 Poll of researchers in Earth sciences:
-![](/img/es_reproducibility_perception.jpg)
+``` {python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
-![](/img/es_reproducibility_reasons_only.jpg)
+positive_colours = ["#607c40", "#a4c484", "#e2ecd9"]
+negative_colours = ["#ab5445", "#f99a89", "#ffe0da"]
+neutral_colour = "#949482"
+
+positive_labels = ["rather agree", "agree", "strongly agree"]
+negative_labels = ["rather disagree", "disagree", "strongly disagree"]
+
+df = pd.read_csv("figs/perception.csv")
+
+fig, axs = plt.subplots(4,1, sharex=True)
+
+for i, row in df.iterrows():
+  question = row["question"]
+
+  positive = [row["rather agree"], row["agree"], row["strongly agree"]]
+  negative = [row["rather disagree"], row["disagree"], row["strongly disagree"]]
+  neutral = row["don't know"]
+
+  # Cumulative sum, but reverse so taller bars are behind smaller bars
+  positive_bars = np.flip(np.cumsum(positive))
+  negative_bars = np.flip(np.cumsum(negative))
+  # Don't need to do this for neutral as it is just one number
+
+
+  axs[i].barh("Positive", positive_bars, color=positive_colours, label=positive_labels)
+  axs[i].barh("Negative", negative_bars, color=negative_colours, label=negative_labels)
+  axs[i].barh("Neutral", neutral, color=neutral_colour, label="don't know")
+
+  axs[i].yaxis.set_inverted(True)
+  axs[i].yaxis.set_visible(False)
+  axs[i].set_title(question)
+
+fig.subplots_adjust(hspace=0.5)
+
+axs[-1].set_xlabel("Responses, %")
+fig.legend(positive_labels + negative_labels + ["don't know"], ncols=7, #bbox_to_anchor=(0, 1),
+  loc='upper center', fontsize='small')
+
+plt.show()
+```
+
+## Reproducibility in Earth sciences
+
+``` {python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+positive_colours = ["#607c40", "#a4c484", "#e2ecd9"]
+negative_colours = ["#ab5445", "#f99a89", "#ffe0da"]
+neutral_colour = "#949482"
+
+positive_labels = ["rather agree", "agree", "strongly agree"]
+negative_labels = ["rather disagree", "disagree", "strongly disagree"]
+
+df = pd.read_csv("figs/reasons.csv")
+
+fig, axs = plt.subplots(6,1, sharex=True)
+
+for i, row in df.iterrows():
+  question = row["question"]
+
+  positive = [row["rather agree"], row["agree"], row["strongly agree"]]
+  negative = [row["rather disagree"], row["disagree"], row["strongly disagree"]]
+  neutral = row["don't know"]
+
+  # Cumulative sum, but reverse so taller bars are behind smaller bars
+  positive_bars = np.flip(np.cumsum(positive))
+  negative_bars = np.flip(np.cumsum(negative))
+  # Don't need to do this for neutral as it is just one number
+
+
+  axs[i].barh("Positive", positive_bars, color=positive_colours, label=positive_labels)
+  axs[i].barh("Negative", negative_bars, color=negative_colours, label=negative_labels)
+  axs[i].barh("Neutral", neutral, color=neutral_colour, label="don't know")
+
+  axs[i].yaxis.set_inverted(True)
+  axs[i].yaxis.set_visible(False)
+  axs[i].set_title(question)
+
+fig.subplots_adjust(hspace=0.5)
+
+axs[-1].set_xlabel("Responses, %")
+fig.legend(positive_labels + negative_labels + ["don't know"], ncols=7, #bbox_to_anchor=(0, 1),
+  loc='upper center', fontsize='small')
+
+plt.show()
+```
 
 ::: footer
 [R Reinecke et al (2022)](https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8)

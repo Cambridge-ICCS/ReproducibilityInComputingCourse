@@ -10,6 +10,8 @@ format:
 authors:
   - name: Jack Franklin
   - name: Marion Weinzierl
+
+jupyter: python3
 ---
 
 {{< include introduction.qmd >}}
