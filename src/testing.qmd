@@ -24,18 +24,14 @@
 
 ## A very short intro to testing
 
----
-
-## Unit tests
+### Unit tests
 
 - Test the smallest logical unit of the code
 - Ensure each component works as intended
 - Test functions for known results
 - Compare to previously produced results
 
----
-
-## Integration tests
+### Integration tests
 
 - Test that components work together
 - Try to have a range of complexity of tests

@@ -12,6 +12,8 @@ We will use the definitions used in [The Turing Way](https://book.the-turing-way
 
 ## What is reproducibility?
 
+\
+
 For a result to be reproducible, it should be possible for someone else to:
 
 - Access your code
@@ -81,8 +83,14 @@ fig.legend(positive_labels + negative_labels + ["don't know"], ncols=7, #bbox_to
 plt.show()
 ```
 
-## Reproducibility in Earth sciences
+::: footer
+[R Reinecke et al (2022)](https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8)
+:::
 
+## Reproducibility in Earth sciences
+\
+
+Poll of researchers in Earth sciences:
 ``` {python}
 import numpy as np
 import pandas as pd
@@ -149,16 +157,18 @@ Other findings:
 
 ## Additional benefits
 
+\
+
 - Reproducibility is not just for scientific results
 - By making our software more reproducible, we also get to reap the benefits!
 
 :::{.columns}
-:::{.column width="50%"}
+:::{.column .fragment width="50%"}
 ### Safely implement changes
 
 - Automation and testing help catch mistakes before they become an issue
 :::
-:::{.column width=50%}
+:::{.column .fragment width=50%}
 ### Rerun analyses
 
 - Create reusable pipelines
@@ -167,13 +177,13 @@ Other findings:
 :::
 
 :::{.columns}
-:::{.column width=50%}
+:::{.column .fragment width=50%}
 ### Faster onboarding
 
 - Better documentation on how to use the software
 - Relevant metadata present - no hunting down dependencies
 :::
-:::{.column width=50%}
+:::{.column .fragment width=50%}
 ### Better collaboration
 
 - Version control for keeping track of code history
@@ -183,7 +193,7 @@ Other findings:
 
 ## Where do we go from here...
 
-
+\
 Throughout the rest of this session, we will walk through the steps that we can
 take to go from an ad hoc collection of scripts into a reproducible scientific 
 workflow!
