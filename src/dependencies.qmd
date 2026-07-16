@@ -5,7 +5,7 @@
 - All software has dependencies
 - Some are more obvious than others:
   - Data/input
-  - Packages/libraries e.g. numpy, Eigen
+  - Packages/libraries e.g. `numpy`, `Eigen`
   - System libraries
   - Compiler/Interpreter
 - If your code can't run without it, it's a dependency!
@@ -22,7 +22,7 @@
 - List them in a tracked file in the repository
   - e.g. add a "Dependencies" section to your README.md
 - Specify:
-  - Versions of each dependency e.g. numpy 2.3.9
+  - Versions of each dependency e.g. `numpy` 2.3.9
   - Where/how to aquire the dependency
 
 ## How to declare data dependencies
@@ -44,7 +44,7 @@
 - There are automated ways of resolving dependencies
 - Usually language/tool specific
 - Some tools automatically update dependency metadata
-  - e.g. Rust's cargo, Julia's Pkg, uv for Python
+  - e.g. Rust's `cargo`, Julia's `Pkg`, `uv` for Python
   - Project file: Depencies and compatible versions
   - Lock file: Write exact version (plus other metadata e.g. source) of *every* 
     dependency you are using

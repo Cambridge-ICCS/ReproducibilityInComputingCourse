@@ -28,7 +28,7 @@ it will be true.
 - Large datafiles should be hosted separately (e.g. on Zenodo)
 - External dependencies should be declared
   - e.g. link to Zenodo dataset in docs and code
-- Use .gitignore to automatically ignore any unwanted files
+- Use `.gitignore` to automatically ignore any unwanted files
   - e.g. build outputs
 
 ## Aside - testing with worktrees
@@ -47,5 +47,3 @@ git worktree add -b <new-branch-name> <path>
 - The repository can then also be hosted a remote service (e.g. GitHub, GitLab, Codeberg, Bitbucket)
 - This will make collaboration with other people a lot easier!
 - It will also mean that any work done can be accessed by collaborators
-
-
