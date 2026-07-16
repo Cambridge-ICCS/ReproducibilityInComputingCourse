@@ -9,11 +9,23 @@
 
 ## README
 
+:::{.columns}
+
+::::{.column width=50%}
+
+&nbsp;
+
 - Markdown file at the project root
 - Should contain:
   - Description of project
   - Dependencies
   - Instructions on building/running
+::::
+
+::::{.column width=50%}
+![](img/ftorch-readme.png)
+::::
+:::
 
 ## Comments
 
