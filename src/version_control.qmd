@@ -2,6 +2,8 @@
 
 ## Version Control
 
+\
+
 - The first thing we should do is move our project into version control (VC)
 - This way we never lose the original state of the project
 - We can then try things without worrying about breaking anything!
@@ -9,10 +11,12 @@
 
 ## What to add to VC
 
+\
+
 - DON'T do this:
-``` bash
-git add .
-```
+  ```console
+  git add .
+  ```
 
 - Our repository should only contain:
   - Code/scripts
@@ -25,6 +29,8 @@ it will be true.
 
 ## What to add to VC
 
+\
+
 - Large datafiles should be hosted separately (e.g. on Zenodo)
 - External dependencies should be declared
   - e.g. link to Zenodo dataset in docs and code
@@ -32,6 +38,8 @@ it will be true.
   - e.g. build outputs
 
 ## Aside - testing with worktrees
+
+\
 
 - git worktrees are like "local clones" of a repository
 - Create a worktree:
@@ -43,6 +51,8 @@ git worktree add -b <new-branch-name> <path>
 - For more info: `git worktree add --help`
 
 ## What to do next?
+
+\
 
 - The repository can then also be hosted a remote service (e.g. GitHub, GitLab, Codeberg, Bitbucket)
 - This will make collaboration with other people a lot easier!

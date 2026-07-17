@@ -12,5 +12,5 @@ Specifically in the directory `exercises/problem`.
 Tasks:
 
 1. Download the Python scripts from the GitHub repository
-2. Create a new git repository on your local machine
-3. Add the Python scripts to git for version control!
+2. Create a new `git` repository on your local machine
+3. Add the Python scripts to `git` for version control!

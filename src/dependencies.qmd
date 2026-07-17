@@ -2,6 +2,8 @@
 
 ## Dependencies
 
+\
+
 - All software has dependencies
 - Some are more obvious than others:
   - Data/input
@@ -12,12 +14,16 @@
 
 ## How to discover dependencies
 
+\
+
 - Some dependencies may be "implicit"
 - For example, you may have a library installed on your system
 - Since the code "just works", you may not be aware of the dependency
 - To find these, try running on a different system (or multiple) and see what breaks
 
 ## How to declare dependencies
+
+\
 
 - List them in a tracked file in the repository
   - e.g. add a "Dependencies" section to your README.md
@@ -27,19 +33,24 @@
 
 ## How to declare data dependencies
 
+\
+
 :::{.columns}
-:::{.column width="30%"}
+:::{.column width="60%"}
 - Links to publicly accessible data dependencies
   - Zenodo or some other long term solution
 - Reference specific versions of the data
+  - Use DOI from hosting platform
 - Ideally automate the fetching of the data
 :::
-:::{.column width="70%"}
-![Example of a zenodo listing. Note how each version of the dataset has a different reference](img/zenodo.jpg)
+:::{.column width="40%"}
+![Example of a zenodo listing. Note how each version of the dataset has a different reference](img/zenodo.png)
 :::
 :::
 
 ## Dependency metadata
+
+\
 
 - There are automated ways of resolving dependencies
 - Usually language/tool specific
@@ -52,6 +63,8 @@
 
 ## System dependencies - Conda
 
+\
+
 - Python centric package manager
 - Can be used for installing python packages
 - Also able to manage environments
@@ -60,8 +73,11 @@
   - even different python versions!
 - Available on most HPC systems (usually as Miniconda)
 - Can export environments to text-based files
+- There are other alternatives, e.g. `pixi`, but `conda` is most available
 
 ## System dependencies - Containers
+
+\
 
 :::{.columns}
 :::{.column width="60%"}
@@ -83,13 +99,15 @@
 
 ## System dependencies - Nix/Guix
 
+\
+
 :::{.columns}
 :::{.column width="60%"}
-What they have in common:
 
 - Declarative package managers
 - Use pure functional languages to create environments
   - same inputs = same outputs
+  - Useful for caching artifacts 
 - Packages are hashed
   - can lookup if package already exists locally
 - Publicly hosted and *versioned* package repository
