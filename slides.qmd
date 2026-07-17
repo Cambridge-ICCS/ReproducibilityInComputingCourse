@@ -10,6 +10,11 @@ format:
 authors:
   - name: Jack Franklin
   - name: Marion Weinzierl
+
+jupyter: python3
+
+execute:
+  cache: true
 ---
 
 {{< include introduction.qmd >}}
@@ -37,20 +42,28 @@ authors:
 ## Reproducibility is important
 
 Primary benefits:
+
 - Confidence in scientific results
 - Peer review/cross analysis
 
 Additional benefits:
-- Allows for code resuse
+
+- Allows for code reuse
 - Better collaboration
 
 ## Ingredients for reproducibility:
 
+&nbsp;
+
 - Version Control
 - Dependency Metadata
 - Public Accessibility
+  - Licence
+- Documentation
 
 ## Even better if
+
+&nbsp;
 
 - Testing for:
   - Verification

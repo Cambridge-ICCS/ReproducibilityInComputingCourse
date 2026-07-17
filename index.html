@@ -223,6 +223,8 @@ Marion Weinzierl
 </section>
 <section id="what-is-reproducibility-1" class="slide level2">
 <h2>What is reproducibility?</h2>
+<p><br>
+</p>
 <p>For a result to be reproducible, it should be possible for someone else to:</p>
 <ul>
 <li>Access your code</li>
@@ -244,14 +246,37 @@ Marion Weinzierl
 </section>
 <section id="reproducibility-in-earth-sciences" class="slide level2">
 <h2>Reproducibility in Earth sciences</h2>
-<p><br>
-Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_perception.jpg"></p>
-<p><img data-src="./img/es_reproducibility_reasons_only.jpg"></p>
+<p>Perception of reproducibility:</p>
+<div id="126250b8" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/cell-2-output-1.png" width="847" height="492"></p>
+</figure>
+</div>
+</div>
+</div>
 <div class="footer">
 <p><a href="https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8">R Reinecke et al (2022)</a></p>
 </div>
 </section>
 <section id="reproducibility-in-earth-sciences-1" class="slide level2">
+<h2>Reproducibility in Earth sciences</h2>
+<p>Reasons for non-reproducibility:</p>
+<div id="e4397d5a" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/cell-3-output-1.png" width="847" height="475"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://iopscience.iop.org/article/10.1088/1748-9326/ac5cf8">R Reinecke et al (2022)</a></p>
+</div>
+</section>
+<section id="reproducibility-in-earth-sciences-2" class="slide level2">
 <h2>Reproducibility in Earth sciences</h2>
 <p>Other findings:</p>
 <ul>
@@ -273,12 +298,12 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 <li>By making our software more reproducible, we also get to reap the benefits!</li>
 </ul>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column fragment" style="width:50%;">
 <h3 id="safely-implement-changes">Safely implement changes</h3>
 <ul>
 <li>Automation and testing help catch mistakes before they become an issue</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column fragment" style="width:50%;">
 <h3 id="rerun-analyses">Rerun analyses</h3>
 <ul>
 <li>Create reusable pipelines</li>
@@ -286,13 +311,13 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </ul>
 </div></div>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column fragment" style="width:50%;">
 <h3 id="faster-onboarding">Faster onboarding</h3>
 <ul>
 <li>Better documentation on how to use the software</li>
 <li>Relevant metadata present - no hunting down dependencies</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column fragment" style="width:50%;">
 <h3 id="better-collaboration">Better collaboration</h3>
 <ul>
 <li>Version control for keeping track of code history</li>
@@ -302,7 +327,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="where-do-we-go-from-here" class="slide level2">
 <h2>Where do we go from here…</h2>
-<p>Throughout the rest of this session, we will walk through the steps that we can take to go from an ad hoc collection of scripts into a reproducible scientific workflow!</p>
+<p><br>
+Throughout the rest of this session, we will walk through the steps that we can take to go from an ad hoc collection of scripts into a reproducible scientific workflow!</p>
 <p>Reproducibility must haves:</p>
 <ul>
 <li>Version Control</li>
@@ -319,6 +345,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="version-control-1" class="slide level2">
 <h2>Version Control</h2>
+<p><br>
+</p>
 <ul>
 <li>The first thing we should do is move our project into version control (VC)</li>
 <li>This way we never lose the original state of the project</li>
@@ -328,12 +356,12 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="what-to-add-to-vc" class="slide level2">
 <h2>What to add to VC</h2>
+<p><br>
+</p>
 <ul>
-<li>DON’T do this:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="fu">git</span> add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Our repository should only contain:
+<li><p>DON’T do this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource console number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>git add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Our repository should only contain:</p>
 <ul>
 <li>Code/scripts</li>
 <li>Documentation</li>
@@ -345,13 +373,15 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="what-to-add-to-vc-1" class="slide level2">
 <h2>What to add to VC</h2>
+<p><br>
+</p>
 <ul>
 <li>Large datafiles should be hosted separately (e.g.&nbsp;on Zenodo)</li>
 <li>External dependencies should be declared
 <ul>
 <li>e.g.&nbsp;link to Zenodo dataset in docs and code</li>
 </ul></li>
-<li>Use .gitignore to automatically ignore any unwanted files
+<li>Use <code>.gitignore</code> to automatically ignore any unwanted files
 <ul>
 <li>e.g.&nbsp;build outputs</li>
 </ul></li>
@@ -359,6 +389,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="aside---testing-with-worktrees" class="slide level2">
 <h2>Aside - testing with worktrees</h2>
+<p><br>
+</p>
 <ul>
 <li>git worktrees are like “local clones” of a repository</li>
 <li>Create a worktree:</li>
@@ -372,6 +404,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="what-to-do-next" class="slide level2">
 <h2>What to do next?</h2>
+<p><br>
+</p>
 <ul>
 <li>The repository can then also be hosted a remote service (e.g.&nbsp;GitHub, GitLab, Codeberg, Bitbucket)</li>
 <li>This will make collaboration with other people a lot easier!</li>
@@ -386,8 +420,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 <p>Tasks:</p>
 <ol type="1">
 <li>Download the Python scripts from the GitHub repository</li>
-<li>Create a new git repository on your local machine</li>
-<li>Add the Python scripts to git for version control!</li>
+<li>Create a new <code>git</code> repository on your local machine</li>
+<li>Add the Python scripts to <code>git</code> for version control!</li>
 </ol>
 </section></section>
 <section>
@@ -397,12 +431,14 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="dependencies-1" class="slide level2">
 <h2>Dependencies</h2>
+<p><br>
+</p>
 <ul>
 <li>All software has dependencies</li>
 <li>Some are more obvious than others:
 <ul>
 <li>Data/input</li>
-<li>Packages/libraries e.g.&nbsp;numpy, Eigen</li>
+<li>Packages/libraries e.g.&nbsp;<code>numpy</code>, <code>Eigen</code></li>
 <li>System libraries</li>
 <li>Compiler/Interpreter</li>
 </ul></li>
@@ -411,6 +447,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="how-to-discover-dependencies" class="slide level2">
 <h2>How to discover dependencies</h2>
+<p><br>
+</p>
 <ul>
 <li>Some dependencies may be “implicit”</li>
 <li>For example, you may have a library installed on your system</li>
@@ -420,6 +458,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="how-to-declare-dependencies" class="slide level2">
 <h2>How to declare dependencies</h2>
+<p><br>
+</p>
 <ul>
 <li>List them in a tracked file in the repository
 <ul>
@@ -427,27 +467,32 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </ul></li>
 <li>Specify:
 <ul>
-<li>Versions of each dependency e.g.&nbsp;numpy 2.3.9</li>
+<li>Versions of each dependency e.g.&nbsp;<code>numpy</code> 2.3.9</li>
 <li>Where/how to aquire the dependency</li>
 </ul></li>
 </ul>
 </section>
 <section id="how-to-declare-data-dependencies" class="slide level2">
 <h2>How to declare data dependencies</h2>
+<p><br>
+</p>
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:60%;">
 <ul>
 <li>Links to publicly accessible data dependencies
 <ul>
 <li>Zenodo or some other long term solution</li>
 </ul></li>
-<li>Reference specific versions of the data</li>
+<li>Reference specific versions of the data
+<ul>
+<li>Use DOI from hosting platform</li>
+</ul></li>
 <li>Ideally automate the fetching of the data</li>
 </ul>
-</div><div class="column" style="width:70%;">
+</div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/zenodo.jpg"></p>
+<p><img data-src="img/zenodo.png"></p>
 <figcaption>Example of a zenodo listing. Note how each version of the dataset has a different reference</figcaption>
 </figure>
 </div>
@@ -455,12 +500,14 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="dependency-metadata" class="slide level2">
 <h2>Dependency metadata</h2>
+<p><br>
+</p>
 <ul>
 <li>There are automated ways of resolving dependencies</li>
 <li>Usually language/tool specific</li>
 <li>Some tools automatically update dependency metadata
 <ul>
-<li>e.g.&nbsp;Rust’s cargo, Julia’s Pkg, uv for Python</li>
+<li>e.g.&nbsp;Rust’s <code>cargo</code>, Julia’s <code>Pkg</code>, <code>uv</code> for Python</li>
 <li>Project file: Depencies and compatible versions</li>
 <li>Lock file: Write exact version (plus other metadata e.g.&nbsp;source) of <em>every</em> dependency you are using</li>
 <li>Important to track both - lock files record the exact environment you use</li>
@@ -469,6 +516,8 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="system-dependencies---conda" class="slide level2">
 <h2>System dependencies - Conda</h2>
+<p><br>
+</p>
 <ul>
 <li>Python centric package manager</li>
 <li>Can be used for installing python packages</li>
@@ -480,10 +529,13 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </ul></li>
 <li>Available on most HPC systems (usually as Miniconda)</li>
 <li>Can export environments to text-based files</li>
+<li>There are other alternatives, e.g.&nbsp;<code>pixi</code>, but <code>conda</code> is most available</li>
 </ul>
 </section>
 <section id="system-dependencies---containers" class="slide level2">
 <h2>System dependencies - Containers</h2>
+<p><br>
+</p>
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
@@ -504,14 +556,16 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="system-dependencies---nixguix" class="slide level2">
 <h2>System dependencies - Nix/Guix</h2>
+<p><br>
+</p>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>What they have in common:</p>
 <ul>
 <li>Declarative package managers</li>
 <li>Use pure functional languages to create environments
 <ul>
 <li>same inputs = same outputs</li>
+<li>Useful for caching artifacts</li>
 </ul></li>
 <li>Packages are hashed
 <ul>
@@ -540,14 +594,62 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 <section id="dependencies-exercises" class="slide level2">
 <h2>Dependencies exercises</h2>
 <p>Returning to the Python scripts, try to answer the following questions:</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">What are the python dependencies?</a></li><li><a href="#tabset-1-2">What are the system dependencies?</a></li><li><a href="#tabset-1-3">What are the data dependencies?</a></li><li><a href="#tabset-1-4">Extension</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li class="fragment"><code>xarray</code></li>
+<li class="fragment"><code>matplotlib</code></li>
+<li class="fragment"><code>numpy</code></li>
+<li class="fragment"><code>netcdf4</code> / <code>h5netcdf</code>!</li>
+</ul>
+</div><div class="fragment column" style="width:60%;">
+<p>The last dependency is tricky, because it is not required by <code>xarray</code>, unless you want to read/write <code>netcdf</code> files! If we include the dependecies of the dependencies, the list is even longer!</p>
+<pre><code>ValueError: found the following matches with the input file in xarray's IO backends: ['netcdf4', 'h5netcdf']. But their dependencies may not be installed, see:
+https://docs.xarray.dev/en/stable/user-guide/io.html
+https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></pre>
+</div></div>
+<div class="fragment">
+
+</div>
+</div>
+<div id="tabset-1-2">
+<ul>
+<li>python3</li>
+<li>netcdf</li>
+<li>lapack library</li>
+<li>blas library</li>
+<li>sqlite</li>
+<li>curl</li>
+<li>glibc</li>
+<li>gcc/gfortran</li>
+<li>mpdecimal</li>
+<li>libffi</li>
+<li>…</li>
+</ul>
+</div>
+<div id="tabset-1-3">
+<ul>
+<li>HadCRUT 5.0.0, specifically:
+<ul>
+<li><code>HadCRUT.5.0.0.0_analysis_summary-series_global_annual.nc</code></li>
+<li><code>HadCRUT.5.0.0.0_analysis_summary-series_northern-hemisphere_annual.nc</code></li>
+<li><code>HadCRUT.5.0.0.0_analysis_summary-series_southern-hemisphere_annual.nc</code></li>
+<li><code>HadCRUT.5.0.0.0_analysis_summary-series_global_monthly.nc</code></li>
+</ul></li>
+</ul>
+</div>
+<div id="tabset-1-4">
 <ol type="1">
-<li>What are the python dependencies?</li>
-<li>What are the system dependencies?</li>
-<li>What are the data dependencies?</li>
+<li>Using your favourite dependency management tool (e.g.&nbsp;Conda, Nix), create a reproducible environment configuration to handle the python and system dependencies.</li>
+<li>Create a way to automatically fetch the data dependencies when using the scripts.</li>
 </ol>
-<h3 id="extension">Extension</h3>
-<p>Using your favourite dependency management tool (e.g.&nbsp;Conda, Nix), create a reproducible environment configuration to handle the python and system dependencies.</p>
-<p>Create a way to automatically fetch the data dependencies when using the scripts.</p>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="automation" class="title-slide slide level1 center">
@@ -659,18 +761,14 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="a-very-short-intro-to-testing" class="slide level2">
 <h2>A very short intro to testing</h2>
-</section>
-<section id="unit-tests" class="slide level2">
-<h2>Unit tests</h2>
+<h3 id="unit-tests">Unit tests</h3>
 <ul>
 <li>Test the smallest logical unit of the code</li>
 <li>Ensure each component works as intended</li>
 <li>Test functions for known results</li>
 <li>Compare to previously produced results</li>
 </ul>
-</section>
-<section id="integration-tests" class="slide level2">
-<h2>Integration tests</h2>
+<h3 id="integration-tests">Integration tests</h3>
 <ul>
 <li>Test that components work together</li>
 <li>Try to have a range of complexity of tests</li>
@@ -723,6 +821,9 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="readme" class="slide level2">
 <h2>README</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>&nbsp;</p>
 <ul>
 <li>Markdown file at the project root</li>
 <li>Should contain:
@@ -732,6 +833,9 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 <li>Instructions on building/running</li>
 </ul></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/ftorch-readme.png"></p>
+</div></div>
 </section>
 <section id="comments" class="slide level2">
 <h2>Comments</h2>
@@ -751,6 +855,19 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 <li>Single source of truth</li>
 <li>Comments/Docstrings embedded in code</li>
 <li>Reduce separation between code and docs</li>
+</ul>
+</section>
+<section id="licences" class="slide level2">
+<h2>Licences</h2>
+<ul>
+<li>Licences are necessary for reproducibility!</li>
+<li>They define how code can be used/reused</li>
+<li>Enforce openness of code and data
+<ul>
+<li>FOSS licenses eg. GPL, MIT, BSD, etc</li>
+</ul></li>
+<li>Many explanations of which licence to use exist (and I’m not a lawyer!)</li>
+<li><a href="https://choosealicense.com/">choosealicense.com</a></li>
 </ul>
 </section>
 <section id="documentation-exercises" class="slide level2">
@@ -839,12 +956,17 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </div>
 </section>
 <section id="riot-science" class="slide level2">
-<h2><img data-src="img/riots.png" style="width:1.5cm"> RIOT Science</h2>
+<h2><img data-src="img/riots.png" style="width: 5%"> RIOT Science</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
+<li><strong>R</strong>eproducible <strong>I</strong>nterpretable <strong>O</strong>pen <strong>T</strong>ransparent</li>
 <li>Groups at universities (mostly Psychology, mostly UK)</li>
 <li>Conferences, events, seminars open to everyone</li>
 </ul>
-<p><img data-src="img/RIOT_principles.png" style="width:80%; fig-align:center;"></p>
+</div><div class="column" style="width: 50%; fig-align: center; ">
+<p><img data-src="img/RIOT_principles.png" style="width: 80%; background-color: white;"></p>
+</div></div>
 </section>
 <section id="the-turing-way" class="slide level2">
 <h2>The Turing Way</h2>
@@ -866,40 +988,56 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </div></div>
 </section>
 <section id="acm-reproducibility-badges" class="slide level2">
-<h2><img data-src="img/acm.png" style="width:10.0%"> ACM Reproducibility Badges</h2>
+<h2><img data-src="img/acm.png" style="width:20%; vertical-align:text-bottom;"> ACM Reproducibility Badges</h2>
 <p>&nbsp;</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/acm_badges.jpg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Applied to research artifacts e.g.&nbsp;papers</li>
+<li>Used across ACM journals and conferences</li>
+<li>Rewards researchers for reproducibility efforts</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/acm_badges.jpg" style="width:90%; fig-align:center"></p>
+</div></div>
 </section>
 <section id="sc-reproducibility-initiative" class="slide level2">
 <h2><img data-src="img/sc26.png" style="width:10.0%"> SC Reproducibility Initiative</h2>
+<p>&nbsp;</p>
 <ul>
 <li><p>SC (formerly Supercomputing), The International Conference for High Performance Computing Networking, Storage, and Analysis</p></li>
-<li><p>Initiative started in 2015, Artifact Descriptions (ADs) optional for the first years -&gt; used in Student Cluster Competition</p></li>
-<li><p>Then gradually made mandatory for more categories/prizes Computational Results Analysis (CRA) -&gt; Artifact Evaluation (AE) appendix still optional</p></li>
-<li><p>AD/AE committee evaluates appendices and recommends ACM badge awards (IEEE badges seem to have vanished)</p></li>
+<li><p>Initiative started in 2015</p>
+<ul>
+<li>Artifact Descriptions (ADs) optional for the first few years</li>
+<li>used in Student Cluster Competition</li>
+</ul></li>
+<li><p>Then gradually made mandatory for more categories/prizes</p>
+<ul>
+<li>Computational Results Analysis (CRA)</li>
+<li>Artifact Evaluation (AE) appendix still optional</li>
+</ul></li>
+<li><p>AD/AE committee evaluates appendices and recommends ACM badge awards</p></li>
 <li><p>Reproducibility challenge introduced 2021</p></li>
 </ul>
 </section>
 <section id="reprohack" class="slide level2">
 <h2><img data-src="img/reprohack_logo.jpg" style="width:5.0%"> ReproHack</h2>
 <ul>
-<li><p>Challenge: Reproduce the results of a paper in one day!</p></li>
+<li><p><strong>Challenge</strong>: Reproduce the results of a paper in one day!</p></li>
 <li><p>Started in 2016 and 2017 as satellite events of OpenCon (inspired by a course by Owen Petchey)</p></li>
 <li><p>Developed further by Anna Krystalli in her SSI fellowship</p></li>
 <li><p>More events, a team formed, remote ReproHacks became a thing….</p></li>
-<li><p>ReproHack Hub launched in 2021</p>
+<li><p>ReproHack Hub launched in 2021</p></li>
+</ul>
+<h3 id="reprohack-hub">ReproHack Hub</h3>
 <ul>
 <li>Material and checklists for organisers</li>
 <li>Paper database</li>
 <li>Evaluation forms</li>
 <li>Events listing</li>
 <li>Support through ReproHack Slack</li>
-</ul></li>
 </ul>
+<p><img data-src="img/reprohack-hub.png"></p>
 </section>
 <section id="and-more" class="slide level2">
 <h2>And more!</h2>
@@ -919,19 +1057,33 @@ Poll of researchers in Earth sciences: <img data-src="./img/es_reproducibility_p
 </section>
 <section id="reproducibility-is-important" class="slide level2">
 <h2>Reproducibility is important</h2>
-<p>Primary benefits: - Confidence in scientific results - Peer review/cross analysis</p>
-<p>Additional benefits: - Allows for code resuse - Better collaboration</p>
+<p>Primary benefits:</p>
+<ul>
+<li>Confidence in scientific results</li>
+<li>Peer review/cross analysis</li>
+</ul>
+<p>Additional benefits:</p>
+<ul>
+<li>Allows for code reuse</li>
+<li>Better collaboration</li>
+</ul>
 </section>
 <section id="ingredients-for-reproducibility" class="slide level2">
 <h2>Ingredients for reproducibility:</h2>
+<p>&nbsp;</p>
 <ul>
 <li>Version Control</li>
 <li>Dependency Metadata</li>
-<li>Public Accessibility</li>
+<li>Public Accessibility
+<ul>
+<li>Licence</li>
+</ul></li>
+<li>Documentation</li>
 </ul>
 </section>
 <section id="even-better-if" class="slide level2">
 <h2>Even better if</h2>
+<p>&nbsp;</p>
 <ul>
 <li>Testing for:
 <ul>
