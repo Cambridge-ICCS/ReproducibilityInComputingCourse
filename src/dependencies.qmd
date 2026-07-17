@@ -2,15 +2,19 @@
 
 ## Dependencies
 
+\
+
 - All software has dependencies
 - Some are more obvious than others:
   - Data/input
-  - Packages/libraries e.g. numpy, Eigen
+  - Packages/libraries e.g. `numpy`, `Eigen`
   - System libraries
   - Compiler/Interpreter
 - If your code can't run without it, it's a dependency!
 
 ## How to discover dependencies
+
+\
 
 - Some dependencies may be "implicit"
 - For example, you may have a library installed on your system
@@ -19,38 +23,47 @@
 
 ## How to declare dependencies
 
+\
+
 - List them in a tracked file in the repository
   - e.g. add a "Dependencies" section to your README.md
 - Specify:
-  - Versions of each dependency e.g. numpy 2.3.9
+  - Versions of each dependency e.g. `numpy` 2.3.9
   - Where/how to aquire the dependency
 
 ## How to declare data dependencies
 
+\
+
 :::{.columns}
-:::{.column width="30%"}
+:::{.column width="60%"}
 - Links to publicly accessible data dependencies
   - Zenodo or some other long term solution
 - Reference specific versions of the data
+  - Use DOI from hosting platform
 - Ideally automate the fetching of the data
 :::
-:::{.column width="70%"}
-![Example of a zenodo listing. Note how each version of the dataset has a different reference](img/zenodo.jpg)
+:::{.column width="40%"}
+![Example of a zenodo listing. Note how each version of the dataset has a different reference](img/zenodo.png)
 :::
 :::
 
 ## Dependency metadata
 
+\
+
 - There are automated ways of resolving dependencies
 - Usually language/tool specific
 - Some tools automatically update dependency metadata
-  - e.g. Rust's cargo, Julia's Pkg, uv for Python
+  - e.g. Rust's `cargo`, Julia's `Pkg`, `uv` for Python
   - Project file: Depencies and compatible versions
   - Lock file: Write exact version (plus other metadata e.g. source) of *every* 
     dependency you are using
   - Important to track both - lock files record the exact environment you use
 
 ## System dependencies - Conda
+
+\
 
 - Python centric package manager
 - Can be used for installing python packages
@@ -60,8 +73,11 @@
   - even different python versions!
 - Available on most HPC systems (usually as Miniconda)
 - Can export environments to text-based files
+- There are other alternatives, e.g. `pixi`, but `conda` is most available
 
 ## System dependencies - Containers
+
+\
 
 :::{.columns}
 :::{.column width="60%"}
@@ -83,13 +99,15 @@
 
 ## System dependencies - Nix/Guix
 
+\
+
 :::{.columns}
 :::{.column width="60%"}
-What they have in common:
 
 - Declarative package managers
 - Use pure functional languages to create environments
   - same inputs = same outputs
+  - Useful for caching artifacts 
 - Packages are hashed
   - can lookup if package already exists locally
 - Publicly hosted and *versioned* package repository

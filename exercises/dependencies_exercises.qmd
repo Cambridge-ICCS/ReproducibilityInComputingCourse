@@ -2,13 +2,61 @@
 
 Returning to the Python scripts, try to answer the following questions:
 
-1. What are the python dependencies? 
-2. What are the system dependencies?
-3. What are the data dependencies?
+::: {.panel-tabset}
+
+### What are the python dependencies?
+
+:::: {.columns}
+
+::::: {.incremental .column width=40%}
+  - `xarray`
+  - `matplotlib`
+  - `numpy`
+  - `netcdf4` / `h5netcdf`!
+:::::
+
+::::: {.fragment .column width=60%}
+The last dependency is tricky, because it is not required by `xarray`, unless you
+want to read/write `netcdf` files!
+If we include the dependecies of the dependencies, the list is even longer!
+```
+ValueError: found the following matches with the input file in xarray's IO backends: ['netcdf4', 'h5netcdf']. But their dependencies may not be installed, see:
+https://docs.xarray.dev/en/stable/user-guide/io.html
+https://docs.xarray.dev/en/stable/getting-started-guide/installing.html
+```
+:::::
+
+::::
+
+:::: {.fragment}
+
+::::
+
+### What are the system dependencies?
+
+- python3
+- netcdf
+- lapack library
+- blas library
+- sqlite
+- curl
+- glibc
+- gcc/gfortran
+- mpdecimal
+- libffi
+- ...
+
+### What are the data dependencies?
+
+- HadCRUT 5.0.0, specifically:
+  - `HadCRUT.5.0.0.0_analysis_summary-series_global_annual.nc`
+  - `HadCRUT.5.0.0.0_analysis_summary-series_northern-hemisphere_annual.nc`
+  - `HadCRUT.5.0.0.0_analysis_summary-series_southern-hemisphere_annual.nc`
+  - `HadCRUT.5.0.0.0_analysis_summary-series_global_monthly.nc`
 
 ### Extension
 
-Using your favourite dependency management tool (e.g. Conda, Nix), create a
+1. Using your favourite dependency management tool (e.g. Conda, Nix), create a
 reproducible environment configuration to handle the python and system dependencies.
-
-Create a way to automatically fetch the data dependencies when using the scripts.
+2. Create a way to automatically fetch the data dependencies when using the scripts.
+:::

@@ -9,11 +9,23 @@
 
 ## README
 
+:::{.columns}
+
+::::{.column width=50%}
+
+&nbsp;
+
 - Markdown file at the project root
 - Should contain:
   - Description of project
   - Dependencies
   - Instructions on building/running
+::::
+
+::::{.column width=50%}
+![](img/ftorch-readme.png)
+::::
+:::
 
 ## Comments
 
@@ -28,3 +40,12 @@
 - Single source of truth
 - Comments/Docstrings embedded in code
 - Reduce separation between code and docs
+
+## Licences
+
+- Licences are necessary for reproducibility!
+- They define how code can be used/reused
+- Enforce openness of code and data
+  - FOSS licenses eg. GPL, MIT, BSD, etc
+- Many explanations of which licence to use exist (and I'm not a lawyer!)
+- [choosealicense.com](https://choosealicense.com/)
