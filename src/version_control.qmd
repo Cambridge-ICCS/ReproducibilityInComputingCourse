@@ -4,6 +4,10 @@
 
 {{< include Summer-school-Intro-Git/slides/_basics.qmd >}}
 
+# Git branches
+
+{{< include Summer-school-Intro-Git/slides/_branching.qmd >}}
+
 ## Using VC
 
 - The first thing we should do is move our project into version control (VC)
