@@ -95,4 +95,4 @@ Additional benefits:
 
 ## ICCS Hacktoberfest 2026
 
-![](img/iccs_hacktoberfest_2026){width=80%, fig-align="center"}
+![](images/iccs_hacktoberfest_2026){width=80%, fig-align="center"}
