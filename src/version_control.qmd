@@ -1,8 +1,10 @@
 # Version Control
 
-## Version Control
+{{< include Summer-school-Intro-Git/slides/_version_control.qmd >}}
 
-\
+{{< include Summer-school-Intro-Git/slides/_basics.qmd >}}
+
+## Using VC
 
 - The first thing we should do is move our project into version control (VC)
 - This way we never lose the original state of the project
@@ -10,8 +12,6 @@
 - This will also benefit any later development, so the sooner the better
 
 ## What to add to VC
-
-\
 
 - DON'T do this:
   ```console

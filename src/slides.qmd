@@ -6,6 +6,21 @@ format:
   revealjs:
     theme: [dracula, custom.scss]
     logo: https://iccs.cam.ac.uk/sites/default/files/iccs_ucam_combined_reverse_colour.png
+    embed-resources: false
+
+    smaller: true
+    slide-number: false
+    incremental: false
+    history: false
+    chalkboard: false
+    preview-links: auto
+
+    highlight-style: github
+    code-overflow: scroll
+    code-line-numbers: false
+
+revealjs-plugins:
+   - attribution
 
 authors:
   - name: Jack Franklin
