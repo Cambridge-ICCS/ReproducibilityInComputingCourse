@@ -4,16 +4,9 @@
 
 {{< include Summer-school-Intro-Git/slides/_basics.qmd >}}
 
-# Git branches
-
 {{< include Summer-school-Intro-Git/slides/_branching.qmd >}}
 
-## Using VC
-
-- The first thing we should do is move our project into version control (VC)
-- This way we never lose the original state of the project
-- We can then try things without worrying about breaking anything!
-- This will also benefit any later development, so the sooner the better
+# Version Control in practice
 
 ## What to add to VC
 
@@ -41,7 +34,45 @@ it will be true.
 - Use `.gitignore` to automatically ignore any unwanted files
   - e.g. build outputs
 
-## Aside - testing with worktrees
+
+## Atomic commits
+
+- Commits should relate to specific logical changes
+  - Makes it easier to understand what changed
+  - Can undo changes 
+  - Easier to locate breaking changes (see `git bisect`)
+
+## Atomic commits
+
+\
+
+### Bad
+```
+$ git log --all --decorate --oneline --graph
+ * 25b29af Add branches content
+ * 9df21b6 Move figures
+```
+
+\
+
+### Still bad! 
+```
+$ git log --all --decorate --oneline --graph
+ * 25b29af Add branches content and add submodules to GH actions
+ * 9df21b6 Move figures into `images` directory
+```
+
+\
+
+### Better!
+```
+$ git log --all --decorate --oneline --graph
+ * 25b29af Add branches content
+ * 16b1a94 Add submodules to GH actions
+ * 9df21b6 Move all figures into `images` directory
+```
+
+# Aside - testing with worktrees
 
 \
 
