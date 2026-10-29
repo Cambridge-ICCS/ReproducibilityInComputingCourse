@@ -1,0 +1,3 @@
+[submodule "src/Summer-school-Intro-Git"]
+	path = src/Summer-school-Intro-Git
+	url = git@github.com:Cambridge-ICCS/Summer-school-Intro-Git.git

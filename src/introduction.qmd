@@ -4,7 +4,7 @@
 
 In scientific research, a result is:
 
-![](/img/reproducibility_matrix.jpg){width=60%, fig-align="center"}
+![](/images/reproducibility_matrix.jpg){width=60%, fig-align="center"}
 
 :::{.footer}
 We will use the definitions used in [The Turing Way](https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/)
