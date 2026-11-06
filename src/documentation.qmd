@@ -23,7 +23,7 @@
 ::::
 
 ::::{.column width=50%}
-![](img/ftorch-readme.png)
+![](images/ftorch-readme.png)
 ::::
 :::
 

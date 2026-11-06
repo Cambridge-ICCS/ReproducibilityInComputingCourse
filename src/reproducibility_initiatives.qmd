@@ -16,7 +16,7 @@ thing (internationally).
 
 ---
 
-## ![](img/ukrnlogo.jpeg){style="width:1.5cm; vertical-align:bottom;"}  UK Reproducibility Network
+## ![](images/ukrnlogo.jpeg){style="width:1.5cm; vertical-align:bottom;"}  UK Reproducibility Network
 
 - Peer-led consortium within the UK, international networks
 
@@ -26,12 +26,12 @@ thing (internationally).
 
 - <https://www.ukrn.org/international-networks/>
 
-![](img/ukrn.png){width=80%, fig-align="center"}
+![](images/ukrn.png){width=80%, fig-align="center"}
 
 ---
 
 
-## ![](img/riots.png){style="width: 5%"} RIOT Science
+## ![](images/riots.png){style="width: 5%"} RIOT Science
 
 :::: {.columns}
 
@@ -43,7 +43,7 @@ thing (internationally).
 :::
 
 ::: {.column style="width: 50%; fig-align: center; "}
-![](img/RIOT_principles.png){style="width: 80%; background-color: white;"}
+![](images/RIOT_principles.png){style="width: 80%; background-color: white;"}
 :::
 
 ::::
@@ -62,12 +62,12 @@ thing (internationally).
 - Collaboration
 :::
 :::{.column width=70%}
-![](img/theturingway-pathway.png){width=80%, fig-align="center"} 
+![](images/theturingway-pathway.png){width=80%, fig-align="center"} 
 :::
 :::
 ---
 
-## ![](img/acm.png){style="width:20%; vertical-align:text-bottom;"} ACM Reproducibility Badges
+## ![](images/acm.png){style="width:20%; vertical-align:text-bottom;"} ACM Reproducibility Badges
 
 &nbsp;
 
@@ -80,14 +80,14 @@ thing (internationally).
 :::
 
 ::: {.column width="50%"}
-![](img/acm_badges.jpg){style="width:90%; fig-align:center"}
+![](images/acm_badges.jpg){style="width:90%; fig-align:center"}
 :::
 
 ::::
 
 ---
 
-## ![](img/sc26.png){width=10%} SC Reproducibility Initiative
+## ![](images/sc26.png){width=10%} SC Reproducibility Initiative
 
 &nbsp;
 
@@ -108,7 +108,7 @@ Performance Computing Networking, Storage, and Analysis
 
 --- 
 
-## ![](img/reprohack_logo.jpg){width=5%}  ReproHack
+## ![](images/reprohack_logo.jpg){width=5%}  ReproHack
 
 - __Challenge__: Reproduce the results of a paper in one day!
 
@@ -129,7 +129,7 @@ course by Owen Petchey)
 - Events listing
 - Support through ReproHack Slack
 
-![](img/reprohack-hub.png)
+![](images/reprohack-hub.png)
 
 ---
 

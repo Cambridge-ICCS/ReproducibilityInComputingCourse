@@ -8,7 +8,7 @@ The FAIR principles were first introduced for data, and later adapted for resear
 
 FAIR stands for
 
-![](img/FAIR_data_principles.png){width=80%}
+![](images/FAIR_data_principles.png){width=80%}
 
 
 [^1]: <https://www.nature.com/articles/s41597-022-01710-x>

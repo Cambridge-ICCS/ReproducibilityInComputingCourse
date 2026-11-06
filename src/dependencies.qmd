@@ -44,7 +44,7 @@
 - Ideally automate the fetching of the data
 :::
 :::{.column width="40%"}
-![Example of a zenodo listing. Note how each version of the dataset has a different reference](img/zenodo.png)
+![Example of a zenodo listing. Note how each version of the dataset has a different reference](images/zenodo.png)
 :::
 :::
 
@@ -91,9 +91,9 @@
 - Portable and cross-platform
 :::
 :::{.column width="40%"}
-![](img/docker-logo-ocean-blue.svg)
-![](img/apptainer.svg)
-![](img/podman-logo-source.svg)
+![](images/docker-logo-ocean-blue.svg)
+![](images/apptainer.svg)
+![](images/podman-logo-source.svg)
 :::
 :::
 
