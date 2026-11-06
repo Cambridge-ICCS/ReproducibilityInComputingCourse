@@ -24,6 +24,9 @@
 
 ## A very short intro to testing
 
+:::{.columns}
+::::{.column width=50%}
+
 ### Unit tests
 
 - Test the smallest logical unit of the code
@@ -31,12 +34,18 @@
 - Test functions for known results
 - Compare to previously produced results
 
+::::
+::::{.column width=50%}
+
 ### Integration tests
 
 - Test that components work together
 - Try to have a range of complexity of tests
 - Can use previous results to validate model
 - Ensure no regression of results
+
+::::
+:::
 
 ---
 

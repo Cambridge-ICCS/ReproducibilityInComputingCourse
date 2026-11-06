@@ -44,6 +44,8 @@ execute:
 {{< include ../exercises/automation_exercises.qmd >}}
 
 {{< include testing.qmd >}}
+{{< include _pytest.qmd >}}
+{{< include ../exercises/testing_exercises.qmd >}}
 
 {{< include documentation.qmd >}}
 {{< include ../exercises/documentation_exercises.qmd >}}
