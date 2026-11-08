@@ -119,18 +119,17 @@ def test_add(x, y, expected):
 
 ## Writing code for unit testing
 
-\
+:::{.columns}
+::::{.column width=50%}
 
 - Unit testing forces us to write code that is minimal
 - Decompose functions into their smallest logical unit
 - Smaller functions are easier to test (and review!)
   - Fewer/simpler inputs
   - Can help to think of edge cases
-
-### Example
-
-:::{.columns}
+::::
 ::::{.column width=50%}
+
 Easier to test this:
 ```{.python}
 def complicated_computation(data):
@@ -147,8 +146,6 @@ def computation_2(t, w, z):
   # Maybe do something else here
   return result
 ```
-::::
-::::{.column width=50%}
 Than this:
 ```{.python}
 def complicated_computation(data):
