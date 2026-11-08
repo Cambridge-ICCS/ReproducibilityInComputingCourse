@@ -95,6 +95,16 @@ Additional benefits:
   - Follow best practice for new code
   - Implement small improvements whenever modifying
 
-## ICCS Hacktoberfest 2026
+## ICCS Summer School 2027
 
-![](images/iccs_hacktoberfest_2026){width=80%, fig-align="center"}
+### Confirmed for 28/06 - 02/07!
+
+:::{.columns}
+::::{.column width=30%}
+Register your interest here:
+![](images/iccs-ss-qr.svg)
+::::
+::::{.column width=70%}
+![](images/iccs-summer-school-2026.jpg)
+::::
+:::
