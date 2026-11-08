@@ -101,18 +101,12 @@ $presentation-line-height: 1.5em;
   height: 90%;
 }
 
-/*-- Get rid of column margins - quarto revealjs has strange behaviour --*/
-.reveal .columns> {
+.reveal .left-column ul {
+  padding-right: 0.5em;
+}
 
-  .column,
-  .column:last-child {
-
-    > :not(ul, ol) {
-
-      margin-left: 0em;
-      margin-right: 0em;
-    }
-  }
+.reveal .right-column ul {
+  margin-left: 1.25em;
 }
 
 .term-container {

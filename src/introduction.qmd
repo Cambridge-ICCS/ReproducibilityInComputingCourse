@@ -161,12 +161,12 @@ Other findings:
 - By making our software more reproducible, we also get to reap the benefits!
 
 :::{.columns}
-:::{.column .fragment width="50%"}
+:::{.column .fragment .left-column width="50%"}
 ### Safely implement changes
 
 - Automation and testing help catch mistakes before they become an issue
 :::
-:::{.column .fragment width=50%}
+:::{.column .fragment .right-column width=50%}
 ### Rerun analyses
 
 - Create reusable pipelines
@@ -175,13 +175,13 @@ Other findings:
 :::
 
 :::{.columns}
-:::{.column .fragment width=50%}
+:::{.column .fragment .left-column width=50%}
 ### Faster onboarding
 
 - Better documentation on how to use the software
 - Relevant metadata present - no hunting down dependencies
 :::
-:::{.column .fragment width=50%}
+:::{.column .fragment .right-column width=50%}
 ### Better collaboration
 
 - Version control for keeping track of code history
