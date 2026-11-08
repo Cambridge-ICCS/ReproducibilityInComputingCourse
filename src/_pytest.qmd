@@ -10,7 +10,7 @@
 - Automatically discovers and runs tests
 ::::
 ::::{.column width=50%}
-![](img/pytest.png){style="width:50%;"}
+![](images/pytest.png){style="width:50%;"}
 ::::
 :::
 
