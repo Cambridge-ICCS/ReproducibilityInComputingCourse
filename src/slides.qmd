@@ -24,7 +24,9 @@ revealjs-plugins:
 
 authors:
   - name: Jack Franklin
+    affiliations: ICCS - University of Cambridge 
   - name: Marion Weinzierl
+    affiliations: ICCS - University of Cambridge 
 
 jupyter: python3
 
