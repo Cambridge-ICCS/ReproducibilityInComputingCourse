@@ -44,7 +44,7 @@
 - Ideally automate the fetching of the data
 :::
 :::{.column width="40%"}
-![Example of a zenodo listing. Note how each version of the dataset has a different reference](images/zenodo.png)
+![Example of a zenodo listing. Note how each version of the dataset has a different reference](images/zenodo.png){.light-bg}
 :::
 :::
 
@@ -92,7 +92,7 @@
 :::
 :::{.column width="40%"}
 ![](images/docker-logo-ocean-blue.svg)
-![](images/apptainer.svg)
+![](images/apptainer.svg){.light-bg}
 ![](images/podman-logo-source.svg)
 :::
 :::

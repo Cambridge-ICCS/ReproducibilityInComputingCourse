@@ -93,6 +93,18 @@ $presentation-line-height: 1.5em;
   margin-top: 1em; 
 }
 
+/* light backdrop for images with dark content, so they stay visible on the
+   dark theme - soft radial gradient ~ gaussian glow behind the image */
+.reveal img.light-bg,
+/* Git logo lives in the Summer-school-Intro-Git submodule as a remote URL,
+   so style it by src instead of editing the submodule */
+.reveal img[src*="Git-Logo"],
+.reveal img[data-src*="Git-Logo"] {
+  background: radial-gradient(ellipse at center, #f2f2f2 0%, #d9d9d9 55%, #b3b3b3 100%);
+  padding: 0.5em;
+  border-radius: 12px;
+}
+
 /*-- vertically center columns (or any container) --*/
 .v-center-container {
   display: flex;

@@ -107,6 +107,6 @@ Register your interest here:
 ![](images/iccs-ss-qr.svg)
 ::::
 ::::{.column width=70%}
-![](images/iccs-summer-school-2026.jpg)
+![](images/iccs-summer-school-2026.jpg){.light-bg}
 ::::
 :::
