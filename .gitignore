@@ -1,2 +1,3 @@
 src/slides_files
 *.html
+.jupyter_cache/

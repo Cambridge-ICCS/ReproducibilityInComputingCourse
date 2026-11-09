@@ -23,7 +23,7 @@
 ::::
 
 ::::{.column width=50%}
-![](images/ftorch-readme.png)
+![](images/ftorch-readme.png){.light-bg}
 ::::
 :::
 
@@ -64,7 +64,7 @@ def energy_balanced_temperature(emissivity, albedo):
     Parameters
     ----------
     emissivity: float
-        Effective emmissivity of the Earth
+        Effective emissivity of the Earth
     albedo: float
         Effective albedo of the Earth
 

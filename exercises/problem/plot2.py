@@ -6,9 +6,9 @@ northern_ds = xarray.open_dataset("../data/HadCRUT.5.0.0.0_analysis_summary-seri
 southern_ds = xarray.open_dataset("../data/HadCRUT.5.0.0.0_analysis_summary-series_southern-hemisphere_annual.nc")
 
 def plot_temp_with_error(ax, ds, label):
-    axs.fill_between(ds['time'].data, ds['tas_lower'].data, ds['tas_upper'].data,
-                     color="grey", alpha=0.3, edgecolor=None)
-    axs.plot(ds['time'].data, ds['tas_mean'].data)
+    ax.fill_between(ds['time'].data, ds['tas_lower'].data, ds['tas_upper'].data,
+                   color="grey", alpha=0.3, edgecolor=None)
+    ax.plot(ds['time'].data, ds['tas_mean'].data, label=label)
 
 
 fig, axs = plt.subplots(1, 1, figsize=(10,6), layout='constrained')

@@ -34,27 +34,27 @@ execute:
   cache: true
 ---
 
-{{< include introduction.qmd >}}
+{{< include _introduction.qmd >}}
 
-{{< include version_control.qmd >}}
-{{< include ../exercises/version_control_exercises.qmd >}}
+{{< include _version_control.qmd >}}
+{{< include ../exercises/01_version_control_exercises.qmd >}}
 
-{{< include dependencies.qmd >}}
-{{< include ../exercises/dependencies_exercises.qmd >}}
+{{< include _dependencies.qmd >}}
+{{< include ../exercises/02_dependencies_exercises.qmd >}}
 
-{{< include automation.qmd >}}
-{{< include ../exercises/automation_exercises.qmd >}}
+{{< include _automation.qmd >}}
+{{< include ../exercises/03_automation_exercises.qmd >}}
 
-{{< include testing.qmd >}}
+{{< include _testing.qmd >}}
 {{< include _pytest.qmd >}}
-{{< include ../exercises/testing_exercises.qmd >}}
+{{< include ../exercises/04_testing_exercises.qmd >}}
 
-{{< include documentation.qmd >}}
-{{< include ../exercises/documentation_exercises.qmd >}}
+{{< include _documentation.qmd >}}
+{{< include ../exercises/05_documentation_exercises.qmd >}}
 
-{{< include fair_principles.qmd >}}
+{{< include _fair_principles.qmd >}}
 
-{{< include reproducibility_initiatives.qmd >}}
+{{< include _reproducibility_initiatives.qmd >}}
 
 # Conclusion/Outlook
 
@@ -107,6 +107,6 @@ Register your interest here:
 ![](images/iccs-ss-qr.svg)
 ::::
 ::::{.column width=70%}
-![](images/iccs-summer-school-2026.jpg)
+![](images/iccs-summer-school-2026.jpg){.light-bg}
 ::::
 :::
