@@ -1,0 +1,13 @@
+## Exercises
+
+In the example repository, there is a file called 'climate_model.py'.
+This file contains some functions that are used in 'plot4.py'
+
+Task:
+
+1. Write some basic tests for these functions (think about inputs that give known
+   outputs)
+2. Think about what properties/behaviours these functions should have, and write
+   tests for them
+3. Look at the other python files, and see if any functions can be extracted and
+   tested

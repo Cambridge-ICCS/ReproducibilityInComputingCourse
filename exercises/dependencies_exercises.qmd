@@ -39,9 +39,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html
 - lapack library
 - blas library
 - sqlite
-- curl
 - glibc
-- gcc/gfortran
 - mpdecimal
 - libffi
 - ...

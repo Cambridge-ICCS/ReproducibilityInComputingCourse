@@ -28,11 +28,24 @@ There are many benefits to automating workflows:
 
 ## Automation and reproducibility
 
+:::{.columns}
+::::{.column width=40%}
 - Automating workflows tracks how research artifacts were actually produced
-
 - Makes it easier for others to use and verify our work
-
 - Results are more trustworthy
+::::
+::::{.column width=60%}
+```{mermaid}
+flowchart TB
+  I[Load Data] --> A[Compute A]
+  I --> B[Compute B]
+  B --> C[Compute C]
+  A --> D[Produce Plot]
+  B --> E[Produce Plot]
+  C --> F[Produce Plot]
+```
+::::
+:::
 
 ## How to automate
 
@@ -49,3 +62,13 @@ There are many benefits to automating workflows:
   - Not as easy to invoke external programs
 
 - Scripts should be written like any other code!
+
+## Workflow engines
+
+- Sometimes workflows become more complicated than a script can handle
+- Workflow engines allow you to declare your workflow, and then handle running it
+- Some can also handle submitting HPC jobs (check your HPC docs/sysadmins first!)
+- Examples:
+  - Snakemake
+  - Cylc
+  - Common Workflow Language (CWL) implementations

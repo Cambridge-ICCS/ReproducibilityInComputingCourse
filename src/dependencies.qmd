@@ -44,7 +44,7 @@
 - Ideally automate the fetching of the data
 :::
 :::{.column width="40%"}
-![Example of a zenodo listing. Note how each version of the dataset has a different reference](img/zenodo.png)
+![Example of a zenodo listing. Note how each version of the dataset has a different reference](images/zenodo.png)
 :::
 :::
 
@@ -91,18 +91,15 @@
 - Portable and cross-platform
 :::
 :::{.column width="40%"}
-![](img/docker-logo-ocean-blue.svg)
-![](img/apptainer.svg)
-![](img/podman-logo-source.svg)
+![](images/docker-logo-ocean-blue.svg)
+![](images/apptainer.svg)
+![](images/podman-logo-source.svg)
 :::
 :::
 
 ## System dependencies - Nix/Guix
 
 \
-
-:::{.columns}
-:::{.column width="60%"}
 
 - Declarative package managers
 - Use pure functional languages to create environments
@@ -112,14 +109,5 @@
   - can lookup if package already exists locally
 - Publicly hosted and *versioned* package repository
   - All packages have defined and unchanging dependencies
-- Handles all dependencies automatically
+- Handle all dependencies automatically
   - even linked libraries, so no hidden dependencies!
-:::
-:::{.column width="40%"}
-How they differ:
-
-- Nix language vs Guile scheme
-- Guix package repository only hosts fully open source packages
-  - Can be difficult when using vendor-locked software e.g. CUDA
-:::
-:::
