@@ -64,6 +64,7 @@ If you want to follow along with the exercises, basic Python coding skills and a
 ## Installation and setup
 
 To complete the exercises, you will need to download the dataset used by the python scripts. This can be found [here](https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.0.0.0/download.html)
+See [exercises/README.md](exercises/README.md) for which files to download and where to put them.
 As part of the exercises will be assessing the data dependencies of the scripts, it will be left as a task to find out which of the datasets you need!
 
 It is recommended to download the python scripts from [exercises/problem](exercises/problem/) to your local machine, in a new directory.
