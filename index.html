@@ -100,7 +100,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-2bcb2995cfecc008b6f86e874802c360.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-706215ee29b560090200ea46e764d0e6.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -230,7 +230,7 @@ Marion Weinzierl
 </p>
 <p>In scientific research, a result is:</p>
 
-<img data-src="./images/reproducibility_matrix.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="images/reproducibility_matrix.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p>We will use the definitions used in <a href="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/">The Turing Way</a></p>
 </div>
 </section>
@@ -260,7 +260,7 @@ Marion Weinzierl
 <section id="reproducibility-in-earth-sciences" class="slide level2">
 <h2>Reproducibility in Earth sciences</h2>
 <p>Perception of reproducibility:</p>
-<div id="fc4b2101" class="cell" data-execution_count="1">
+<div id="a0aaaa57" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -276,7 +276,7 @@ Marion Weinzierl
 <section id="reproducibility-in-earth-sciences-1" class="slide level2">
 <h2>Reproducibility in Earth sciences</h2>
 <p>Reasons for non-reproducibility:</p>
-<div id="8c77bbf0" class="cell" data-execution_count="2">
+<div id="5593fe55" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1276,7 +1276,7 @@ Throughout the rest of this session, we will walk through the steps that we can 
 <li>Specify:
 <ul>
 <li>Versions of each dependency e.g.&nbsp;<code>numpy</code> 2.3.9</li>
-<li>Where/how to aquire the dependency</li>
+<li>Where/how to acquire the dependency</li>
 </ul></li>
 </ul>
 </section>
@@ -1300,7 +1300,7 @@ Throughout the rest of this session, we will walk through the steps that we can 
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/zenodo.png"></p>
+<p><img data-src="images/zenodo.png" class="light-bg"></p>
 <figcaption>Example of a zenodo listing. Note how each version of the dataset has a different reference</figcaption>
 </figure>
 </div>
@@ -1359,7 +1359,7 @@ Throughout the rest of this session, we will walk through the steps that we can 
 <li>Portable and cross-platform</li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="images/docker-logo-ocean-blue.svg"> <img data-src="images/apptainer.svg"> <img data-src="images/podman-logo-source.svg"></p>
+<p><img data-src="images/docker-logo-ocean-blue.svg"> <img data-src="images/apptainer.svg" class="light-bg"> <img data-src="images/podman-logo-source.svg"></p>
 </div></div>
 </section>
 <section id="system-dependencies---nixguix" class="slide level2">
@@ -1399,11 +1399,10 @@ Throughout the rest of this session, we will walk through the steps that we can 
 <ul>
 <li class="fragment"><code>xarray</code></li>
 <li class="fragment"><code>matplotlib</code></li>
-<li class="fragment"><code>numpy</code></li>
 <li class="fragment"><code>netcdf4</code> / <code>h5netcdf</code>!</li>
 </ul>
 </div><div class="fragment column" style="width:60%;">
-<p>The last dependency is tricky, because it is not required by <code>xarray</code>, unless you want to read/write <code>netcdf</code> files! If we include the dependecies of the dependencies, the list is even longer!</p>
+<p>The last dependency is tricky, because it is not required by <code>xarray</code>, unless you want to read/write <code>netcdf</code> files! If we include the dependencies of the dependencies (e.g.&nbsp;<code>numpy</code>, which <code>xarray</code> and <code>matplotlib</code> both rely on without importing it directly in our scripts), the list is even longer!</p>
 <pre><code>ValueError: found the following matches with the input file in xarray's IO backends: ['netcdf4', 'h5netcdf']. But their dependencies may not be installed, see:
 https://docs.xarray.dev/en/stable/user-guide/io.html
 https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></pre>
@@ -1709,9 +1708,9 @@ tests/test.py <span class="term-fg32">.                                         
 <p>What if we implemented <code>add</code> wrong?</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>src/add,py</strong></pre>
+<pre><strong>src/add.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="src/add,py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="src/add.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
 <span id="cb22-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> a<span class="op">-</span>b <span class="co"># Incorrect</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><br>
@@ -1848,7 +1847,7 @@ tests/test.py <span class="term-fg31">F                                         
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/ftorch-readme.png"></p>
+<p><img data-src="images/ftorch-readme.png" class="light-bg"></p>
 </div></div>
 </section>
 <section id="licences" class="slide level2">
@@ -1901,7 +1900,7 @@ tests/test.py <span class="term-fg31">F                                         
 <span id="cb26-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
 <span id="cb26-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
 <span id="cb26-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    emissivity: float</span></span>
-<span id="cb26-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">        Effective emmissivity of the Earth</span></span>
+<span id="cb26-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">        Effective emissivity of the Earth</span></span>
 <span id="cb26-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    albedo: float</span></span>
 <span id="cb26-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">        Effective albedo of the Earth</span></span>
 <span id="cb26-11"><a href="" aria-hidden="true" tabindex="-1"></a></span>
@@ -2164,7 +2163,7 @@ tests/test.py <span class="term-fg31">F                                         
 <div class="column" style="width:30%;">
 <p>Register your interest here: <img data-src="images/iccs-ss-qr.svg"></p>
 </div><div class="column" style="width:70%;">
-<p><img data-src="images/iccs-summer-school-2026.jpg"></p>
+<p><img data-src="images/iccs-summer-school-2026.jpg" class="light-bg"></p>
 </div></div>
 
 </section></section>

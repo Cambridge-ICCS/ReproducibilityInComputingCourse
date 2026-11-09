@@ -61,7 +61,7 @@ tests&#47;test.py <span class="term-fg32">.                                     
 
 What if we implemented `add` wrong?
   
-```{.python filename="src/add,py"}
+```{.python filename="src/add.py"}
 def add(a, b):
   return a-b # Incorrect
 ```
