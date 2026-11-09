@@ -77,7 +77,7 @@ $ git log --all --decorate --oneline --graph
 - git worktrees are like "local clones" of a repository
 - Create a worktree:
 ``` bash
-git worktree add -b <new-branch-name> <path>
+$ git worktree add -b <new-branch-name> <path>
 ```
 - Will make a new directory, with only files that are tracked
 - Can use as a cleanroom to ensure all dependencies are there
