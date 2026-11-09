@@ -11,14 +11,15 @@ Returning to the Python scripts, try to answer the following questions:
 ::::: {.incremental .column width=40%}
   - `xarray`
   - `matplotlib`
-  - `numpy`
   - `netcdf4` / `h5netcdf`!
 :::::
 
 ::::: {.fragment .column width=60%}
 The last dependency is tricky, because it is not required by `xarray`, unless you
 want to read/write `netcdf` files!
-If we include the dependencies of the dependencies, the list is even longer!
+If we include the dependencies of the dependencies (e.g. `numpy`, which `xarray`
+and `matplotlib` both rely on without importing it directly in our scripts), the
+list is even longer!
 ```
 ValueError: found the following matches with the input file in xarray's IO backends: ['netcdf4', 'h5netcdf']. But their dependencies may not be installed, see:
 https://docs.xarray.dev/en/stable/user-guide/io.html
