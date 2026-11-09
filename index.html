@@ -6,23 +6,26 @@
 <script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-dark-3218d7d29a29f08bc4fdf3802c3e3ca5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
   <title>Reproducibility in Scientific Computing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -61,46 +64,47 @@
       }
     pre.numberSource { margin-left: 3em;  padding-left: 4px; }
     div.sourceCode
-      { color: #f8f8f2;  }
+      { color: #e1e4e8; background-color: #24292e; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
+    code span { color: #e1e4e8; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #f97583; } /* Attribute */
+    code span.bn { color: #79b8ff; } /* BaseN */
+    code span.bu { color: #f97583; } /* BuiltIn */
+    code span.cf { color: #f97583; } /* ControlFlow */
+    code span.ch { color: #9ecbff; } /* Char */
+    code span.cn { color: #79b8ff; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #f97583; } /* DataType */
+    code span.dv { color: #79b8ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
+    code span.fl { color: #79b8ff; } /* Float */
+    code span.fu { color: #b392f0; } /* Function */
+    code span.im { color: #9ecbff; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #f97583; } /* Keyword */
+    code span.op { color: #e1e4e8; } /* Operator */
+    code span.ot { color: #b392f0; } /* Other */
+    code span.pp { color: #f97583; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #79b8ff; } /* SpecialChar */
+    code span.ss { color: #9ecbff; } /* SpecialString */
+    code span.st { color: #9ecbff; } /* String */
+    code span.va { color: #ffab70; } /* Variable */
+    code span.vs { color: #9ecbff; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-7df0d300de292c7d42a0408035c04211.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-2bcb2995cfecc008b6f86e874802c360.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="slides_files/libs/revealjs/plugin/reveal-attribution/attribution.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -189,6 +193,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="slides_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="slides_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="slides_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -200,14 +207,20 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Jack Franklin 
+Jack Franklin
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            ICCS - University of Cambridge
+          </p>
+    </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Marion Weinzierl 
+Marion Weinzierl
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            ICCS - University of Cambridge
+          </p>
+    </div>
 </div>
 
 </section>
@@ -217,7 +230,7 @@ Marion Weinzierl
 </p>
 <p>In scientific research, a result is:</p>
 
-<img data-src="./img/reproducibility_matrix.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<img data-src="./images/reproducibility_matrix.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p>We will use the definitions used in <a href="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions/">The Turing Way</a></p>
 </div>
 </section>
@@ -247,7 +260,7 @@ Marion Weinzierl
 <section id="reproducibility-in-earth-sciences" class="slide level2">
 <h2>Reproducibility in Earth sciences</h2>
 <p>Perception of reproducibility:</p>
-<div id="126250b8" class="cell" data-execution_count="1">
+<div id="fc4b2101" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -263,7 +276,7 @@ Marion Weinzierl
 <section id="reproducibility-in-earth-sciences-1" class="slide level2">
 <h2>Reproducibility in Earth sciences</h2>
 <p>Reasons for non-reproducibility:</p>
-<div id="e4397d5a" class="cell" data-execution_count="2">
+<div id="8c77bbf0" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -298,12 +311,12 @@ Marion Weinzierl
 <li>By making our software more reproducible, we also get to reap the benefits!</li>
 </ul>
 <div class="columns">
-<div class="column fragment" style="width:50%;">
+<div class="column fragment left-column" style="width:50%;">
 <h3 id="safely-implement-changes">Safely implement changes</h3>
 <ul>
 <li>Automation and testing help catch mistakes before they become an issue</li>
 </ul>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column fragment right-column" style="width:50%;">
 <h3 id="rerun-analyses">Rerun analyses</h3>
 <ul>
 <li>Create reusable pipelines</li>
@@ -311,13 +324,13 @@ Marion Weinzierl
 </ul>
 </div></div>
 <div class="columns">
-<div class="column fragment" style="width:50%;">
+<div class="column fragment left-column" style="width:50%;">
 <h3 id="faster-onboarding">Faster onboarding</h3>
 <ul>
 <li>Better documentation on how to use the software</li>
 <li>Relevant metadata present - no hunting down dependencies</li>
 </ul>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column fragment right-column" style="width:50%;">
 <h3 id="better-collaboration">Better collaboration</h3>
 <ul>
 <li>Version control for keeping track of code history</li>
@@ -343,24 +356,787 @@ Throughout the rest of this session, we will walk through the steps that we can 
 <h1>Version Control</h1>
 
 </section>
-<section id="version-control-1" class="slide level2">
-<h2>Version Control</h2>
-<p><br>
-</p>
+<section id="what-are-version-control-systems-vcss" class="slide level2">
+<h2>What are Version Control Systems (VCSs)?</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div style="margin-top: 3em;">
 <ul>
-<li>The first thing we should do is move our project into version control (VC)</li>
-<li>This way we never lose the original state of the project</li>
-<li>We can then try things without worrying about breaking anything!</li>
-<li>This will also benefit any later development, so the sooner the better</li>
+<li>Tools to track changes to code</li>
+<li>Maintain a history of changes as a series of <em>snapshots</em>
+<ul>
+<li>Allow to go back in time to a previous state</li>
+</ul></li>
+<li>Facilitate <em>collaboration</em></li>
+<li>Require very little overhead for a huge benefit</li>
 </ul>
+</div>
+</div><div class="column" style="width:30%;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/2/22/Apache_Subversion_logo.svg" class="absolute" style="top: 13.5%; right: 0%; width: 13%; "> <img data-src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" class="absolute" style="top: 35.5%; right: 0px; width: 19%; "> <img data-src="https://www.mercurial-scm.org/hg-logo/logo-droplets.svg" class="absolute" style="bottom: 25.5%; right: 0%; width: 11%; "></p>
+</div></div>
+<div class="attribution">
+<p><a href="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png">Git</a> by Jason Long under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/2/22/Apache_Subversion_logo.svg">Subversion</a> under <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></p>
+<p><a href="https://www.mercurial-scm.org/hg-logo/logo-droplets.svg">Mercurial</a> under <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPLv2+</a></p>
+</div>
+</section>
+<section id="why-git" class="slide level2">
+<h2>Why Git?</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div style="margin-top: 1.5em;">
+<ul>
+<li>De facto standard for VC in the open source community
+<ul>
+<li>Git is open source itself!</li>
+<li>Has a rich ecosystem around</li>
+</ul></li>
+<li>Distributed VC approach (vs centralized)</li>
+<li>Supports non-linear development (branching)</li>
+<li>Gives fine-grained control</li>
+<li>High performance/Scalable</li>
+</ul>
+</div>
+</div><div class="column" style="width:60%;">
+<p><img data-src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" class="absolute" style="top: 35.5%; right: 0px; width: 19%; "></p>
+</div></div>
+<div class="attribution">
+<p><a href="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png">Git</a> by Jason Long under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></p>
+</div>
+</section>
+<section id="github-hosting-and-collaboration" class="slide level2">
+<h2>Github: Hosting and collaboration</h2>
+<p><img data-src="images/github-mark.svg" class="absolute" style="top: 30%; right: 0%; width: 13%; "></p>
+<div style="margin-top: 3em;">
+<ul>
+<li>Code hosting platform</li>
+<li>Most widely used to host open source software</li>
+<li>Eases the development with tools
+<ul>
+<li>Pull Requests (PRs)</li>
+<li>Issues and Discussions</li>
+<li>More advance features like Continuous Integration, Automated Testing</li>
+</ul></li>
+</ul>
+</div>
+<div class="attribution">
+<p><a href="https://xkcd.com/1597/">git</a> by <a href="https://xkcd.com">xkcd</a> used under <a href="https://creativecommons.org/licenses/by-nc/2.5/">cc by-nc 2.5</a></p>
+</div>
+</section>
+<section id="what-is-a-git-repository" class="slide level2">
+<h2>What is a Git repository?</h2>
+<div style="margin-top: 3em;">
+<ul>
+<li>A place where you can store your code, your files, and each file’s revision history.</li>
+<li>Contains a <code>.git</code> folder at the root which does all the git magic behind the scenes.</li>
+</ul>
+</div>
+</section>
+<section id="creating-a-git-repository" class="slide level2">
+<h2>Creating a git repository</h2>
+<ul>
+<li>Navigate to a folder you want to work in, and create a new folder to contain your repository:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd your_dir</span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir intro-repo</span>
+<span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd intro-repo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then initialise the folder</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git init <span class="at">-b</span> main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>.git</strong></p>
+</div>
+<div class="callout-content">
+<p>A hidden <code>.git</code> folder has been created in your folder. This contains everything Git needs to work.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-a-git-commit" class="slide level2">
+<h2>What is a Git commit?</h2>
+<ul>
+<li>You can think of a commit as a snapshot of your work at a particular time</li>
+<li>You can navigate between commits easily with git</li>
+<li>This allows you to switch easily between different versions of your work</li>
+<li>When you commit, rather than saving all the files in a project every time, git is efficient and only stores the files which have been changed between the previous commit and your current one</li>
+<li>The commit also stores a reference to its parent commit</li>
+</ul>
+</section>
+<section id="committing-is-a-three-part-process" class="slide level2">
+<h2>Committing is a three part process:</h2>
+<div style="margin-top: 3em;">
+<ol type="1">
+<li><strong>Modify</strong>: change the file in your working tree, i.e., go in and edit the file as usual</li>
+<li><strong>Stage</strong>: Tell git that you would like this file to be included in your next commit</li>
+<li><strong>Commit</strong>: Tell git to take a snapshot of the files you staged</li>
+</ol>
+</div>
+</section>
+<section id="at-each-step-in-the-process-the-file-is-stored-in-a-different-area" class="slide level2">
+<h2>At each step in the process, the file is stored in a different area:</h2>
+
+<img data-src="images/show_different_file_states.png" class="r-stretch"></section>
+<section id="git-states" class="slide level2">
+<h2>Git States</h2>
+<p><code>git</code> has four main states that your files can be in:</p>
+<ul>
+<li><strong>Untracked</strong>: You’ve created a new file and not told git to keep track of it.</li>
+<li><strong>Modified</strong>: You’ve changed a file that git already has a record of, but have not told git to include these changes in your next commit. We say these files are in the working tree.</li>
+<li><strong>Staged</strong>: You’ve told git to include the file next time you do a commit. We say these files are in the staging area.</li>
+<li><strong>Committed</strong>: The file is saved in it’s present state in the most recent commit.</li>
+</ul>
+</section>
+<section id="create-an-untracked-file" class="slide level2">
+<h2>Create an untracked file:</h2>
+
+<img data-src="images/create_untracked_file.png" class="r-stretch"></section>
+<section id="create-an-untracked-file-1" class="slide level2">
+<h2>Create an untracked file:</h2>
+<div style="margin-top: 3em;">
+<p>Create a new file in your repository.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> touch new.txt</span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> vim new.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br> Lets check what git can see…</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="git-status" class="slide level2">
+<h2><code>git status</code></h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span>
+<span id="cb5-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<span id="cb5-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
+<span id="cb5-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">Untracked</span> files:</span>
+<span id="cb5-8"><a href="" aria-hidden="true" tabindex="-1"></a>   <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to include in what will be committed<span class="kw">)</span></span>
+<span id="cb5-9"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="ex">new.txt</span></span>
+<span id="cb5-11"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>git status</strong></p>
+</div>
+<div class="callout-content">
+<p>Highlights your working branch -&gt; <code>main</code> <br> Reports commit status -&gt; none yet <br>Highlights untracked files -&gt; <code>new.txt</code> <br>Proposes adding these to git with <code>git add</code></p>
+</div>
+</div>
+</div>
+</section>
+<section id="add-the-untracked-file-to-the-staging-area" class="slide level2">
+<h2>Add the untracked file to the staging area:</h2>
+
+<img data-src="images/add_to_staging_area.png" class="r-stretch"></section>
+<section id="git-add" class="slide level2">
+<h2><code>git add</code></h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<span id="cb6-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
+<span id="cb6-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">Changes</span> to be committed:</span>
+<span id="cb6-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git rm --cached &lt;file&gt;..."</span> to unstage<span class="kw">)</span></span>
+<span id="cb6-9"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="ex">new</span> file:   new.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>git add</strong></p>
+</div>
+<div class="callout-content">
+<p>Moves file(s) into “Staging area” ready for commit</p>
+</div>
+</div>
+</div>
+</section>
+<section id="committing-your-changes" class="slide level2">
+<h2>Committing your changes:</h2>
+
+<img data-src="images/commit_to_repository.png" class="r-stretch"></section>
+<section id="committing-your-changes-1" class="slide level2">
+<h2>Committing your changes:</h2>
+<div style="margin-top: 3em;">
+<p>Commit your file to the local git repo</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Commit message"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>git commit</code>: tells git you want to commit</li>
+<li><code>-m "Commit message"</code>: adds a human-readable description to the <code>log</code> of this commit. This is important as it tells you and others what the commit intent is.</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Writing meaningful commit message</strong></p>
+</div>
+<div class="callout-content">
+<p>There are many conventions and good practices to write good commit messages. Based on scope of the project and other factors particular conventions are chosen.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="commit-the-staged-file" class="slide level2">
+<h2>Commit the staged file</h2>
+<div style="margin-top: 3em;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Created new.txt"</span></span>
+<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">[main</span> <span class="er">(</span><span class="ex">root-commit</span><span class="kw">)</span> <span class="ex">f22b25e]</span> Created new.txt</span>
+<span id="cb8-4"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">1</span> file changed, 1 insertion<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span>
+<span id="cb8-5"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">create</span> mode 100644 new.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span>
+<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<span id="cb9-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> to commit, working tree clean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="git-log" class="slide level2">
+<h2>git log</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log</span>
+<span id="cb10-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">commit</span> f22b25e3233b4645dabd0d81e651fe074bd8e73b</span>
+<span id="cb10-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">Author:</span> Jane Doe <span class="op">&lt;</span>jmd123@cam.ac.uk<span class="op">&gt;</span></span>
+<span id="cb10-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">Date:</span>   Monday July 7 09:51:46 2025 <span class="at">-0400</span></span>
+<span id="cb10-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="ex">Create</span> new.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>git log</strong></p>
+</div>
+<div class="callout-content">
+<p>Displays commits in reverse chronological order.</p>
+<p>Includes full identifier, author and date</p>
+</div>
+</div>
+</div>
+<ul>
+<li><code>git log --graph</code> shows the dependencies of commits in graph view
+<ul>
+<li>especially useful in non-linear development</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-a-git-branch" class="slide level2">
+<h2>What is a Git branch?</h2>
+<ul>
+<li>A branch is a pointer to a commit, and updates as new commits are made.</li>
+<li>The work done so far has been on the <code>main</code> branch.</li>
+<li>Using multiple branches enable collaborative work in parallel without interfering with the changes of others.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 533.00 134.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 130)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-130 529,-130 529,4 -4,4"></polygon>
+<!-- C1 -->
+<g id="node1" class="node">
+<title>C1</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="27" y="-103.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="27" y="-86.4" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- C2 -->
+<g id="node2" class="node">
+<title>C2</title>
+<ellipse fill="none" stroke="black" cx="154" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="154" y="-103.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="154" y="-86.4" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- C1&#45;&gt;C2 -->
+<g id="edge1" class="edge">
+<title>C1-&gt;C2</title>
+<path fill="none" stroke="black" d="M54.2,-99C72.37,-99 96.8,-99 116.82,-99"></path>
+<polygon fill="black" stroke="black" points="116.83,-102.5 126.83,-99 116.83,-95.5 116.83,-102.5"></polygon>
+</g>
+<!-- C5 -->
+<g id="node3" class="node">
+<title>C5</title>
+<ellipse fill="none" stroke="black" cx="281" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="281" y="-103.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="281" y="-86.4" font-family="Times,serif" font-size="14.00">5</text>
+</g>
+<!-- C2&#45;&gt;C5 -->
+<g id="edge2" class="edge">
+<title>C2-&gt;C5</title>
+<path fill="none" stroke="black" d="M181.2,-99C199.37,-99 223.8,-99 243.82,-99"></path>
+<polygon fill="black" stroke="black" points="243.83,-102.5 253.83,-99 243.83,-95.5 243.83,-102.5"></polygon>
+</g>
+<!-- C3 -->
+<g id="node6" class="node">
+<title>C3</title>
+<ellipse fill="none" stroke="red" cx="281" cy="-27" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="281" y="-31.2" font-family="Times,serif" font-size="14.00" fill="red">Commit</text>
+<text text-anchor="middle" x="281" y="-14.4" font-family="Times,serif" font-size="14.00" fill="red">3</text>
+</g>
+<!-- C2&#45;&gt;C3 -->
+<g id="edge5" class="edge">
+<title>C2-&gt;C3</title>
+<path fill="none" stroke="red" d="M177.93,-85.79C197.66,-74.43 226.34,-57.91 248.28,-45.27"></path>
+<polygon fill="red" stroke="red" points="250.3,-48.15 257.22,-40.12 246.81,-42.08 250.3,-48.15"></polygon>
+</g>
+<!-- C6 -->
+<g id="node4" class="node">
+<title>C6</title>
+<ellipse fill="none" stroke="black" cx="408" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="408" y="-103.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="408" y="-86.4" font-family="Times,serif" font-size="14.00">6</text>
+</g>
+<!-- C5&#45;&gt;C6 -->
+<g id="edge3" class="edge">
+<title>C5-&gt;C6</title>
+<path fill="none" stroke="black" d="M308.2,-99C326.37,-99 350.8,-99 370.82,-99"></path>
+<polygon fill="black" stroke="black" points="370.83,-102.5 380.83,-99 370.83,-95.5 370.83,-102.5"></polygon>
+</g>
+<!-- main -->
+<g id="node5" class="node">
+<title>main</title>
+<text text-anchor="middle" x="498" y="-94.8" font-family="Times,serif" font-size="14.00">main</text>
+</g>
+<!-- C6&#45;&gt;main -->
+<g id="edge4" class="edge">
+<title>C6-&gt;main</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M435.4,-99C446.64,-99 459.72,-99 470.92,-99"></path>
+</g>
+<!-- C4 -->
+<g id="node7" class="node">
+<title>C4</title>
+<ellipse fill="none" stroke="red" cx="408" cy="-27" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="408" y="-31.2" font-family="Times,serif" font-size="14.00" fill="red">Commit</text>
+<text text-anchor="middle" x="408" y="-14.4" font-family="Times,serif" font-size="14.00" fill="red">4</text>
+</g>
+<!-- C3&#45;&gt;C4 -->
+<g id="edge6" class="edge">
+<title>C3-&gt;C4</title>
+<path fill="none" stroke="red" d="M308.2,-27C326.37,-27 350.8,-27 370.82,-27"></path>
+<polygon fill="red" stroke="red" points="370.83,-30.5 380.83,-27 370.83,-23.5 370.83,-30.5"></polygon>
+</g>
+<!-- branch&#45;1 -->
+<g id="node8" class="node">
+<title>branch-1</title>
+<text text-anchor="middle" x="498" y="-22.8" font-family="Times,serif" font-size="14.00" fill="red">branch-1</text>
+</g>
+<!-- C4&#45;&gt;branch&#45;1 -->
+<g id="edge7" class="edge">
+<title>C4-&gt;branch-1</title>
+<path fill="none" stroke="red" stroke-dasharray="1,5" d="M435.4,-27C446.64,-27 459.72,-27 470.92,-27"></path>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-a-git-branch" class="slide level2">
+<h2>Creating a git branch:</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br> 1. Initially, ‘main’ points to the most recent commit. <br><br><br><br> 2. Upon creation, ‘my-branch’ points to the same commit. <br><br><br><br> 3. As new commits are made ‘my-branch’ updates to point to these.</p>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-fig-width="50%" data-fig-height="100%" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="NaN" height="NaN" viewbox="0.00 0.00 242.00 287.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 283)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-283 238,-283 238,4 -4,4"></polygon>
+<!-- C1 -->
+<g id="node1" class="node">
+<title>C1</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-252" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="27" y="-256.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="27" y="-239.4" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- M1 -->
+<g id="node2" class="node">
+<title>M1</title>
+<text text-anchor="middle" x="117" y="-247.8" font-family="Times,serif" font-size="14.00">main</text>
+</g>
+<!-- C1&#45;&gt;M1 -->
+<g id="edge1" class="edge">
+<title>C1-&gt;M1</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M54,-252C65.29,-252 78.39,-252 89.71,-252"></path>
+</g>
+<!-- C2 -->
+<g id="node3" class="node">
+<title>C2</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-162" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="27" y="-166.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="27" y="-149.4" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- C1&#45;&gt;C2 -->
+<!-- M2 -->
+<g id="node4" class="node">
+<title>M2</title>
+<text text-anchor="middle" x="117" y="-167.8" font-family="Times,serif" font-size="14.00">main</text>
+</g>
+<!-- C2&#45;&gt;M2 -->
+<g id="edge2" class="edge">
+<title>C2-&gt;M2</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M52.55,-172C64.19,-172 77.98,-172 89.81,-172"></path>
+</g>
+<!-- B2 -->
+<g id="node5" class="node">
+<title>B2</title>
+<text text-anchor="middle" x="117" y="-148.8" font-family="Times,serif" font-size="14.00">my-branch</text>
+</g>
+<!-- C2&#45;&gt;B2 -->
+<g id="edge3" class="edge">
+<title>C2-&gt;B2</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M52.55,-153C64.19,-153 77.98,-153 89.81,-153"></path>
+</g>
+<!-- C3 -->
+<g id="node6" class="node">
+<title>C3</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-90" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="27" y="-94.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="27" y="-77.4" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- C2&#45;&gt;C3 -->
+<!-- M3 -->
+<g id="node7" class="node">
+<title>M3</title>
+<text text-anchor="middle" x="117" y="-85.8" font-family="Times,serif" font-size="14.00">main</text>
+</g>
+<!-- C3&#45;&gt;M3 -->
+<g id="edge4" class="edge">
+<title>C3-&gt;M3</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M54,-90C65.29,-90 78.39,-90 89.71,-90"></path>
+</g>
+<!-- dummy3 -->
+<!-- C3&#45;&gt;dummy3 -->
+<g id="edge6" class="edge">
+<title>C3-&gt;dummy3</title>
+<path fill="none" stroke="black" d="M27,-63C27,-50.34 27,-37.69 27,-36.15"></path>
+</g>
+<!-- C32 -->
+<g id="node8" class="node">
+<title>C32</title>
+<ellipse fill="none" stroke="black" cx="117" cy="-27" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="117" y="-31.2" font-family="Times,serif" font-size="14.00">Commit</text>
+<text text-anchor="middle" x="117" y="-14.4" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- B3 -->
+<g id="node9" class="node">
+<title>B3</title>
+<text text-anchor="middle" x="207" y="-22.8" font-family="Times,serif" font-size="14.00">my-branch</text>
+</g>
+<!-- C32&#45;&gt;B3 -->
+<g id="edge5" class="edge">
+<title>C32-&gt;B3</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M144,-27C155.29,-27 168.39,-27 179.71,-27"></path>
+</g>
+<!-- dummy3&#45;&gt;C32 -->
+<g id="edge7" class="edge">
+<title>dummy3-&gt;C32</title>
+<path fill="none" stroke="black" d="M27.07,-36C27.07,-36 81.18,-36 81.18,-36"></path>
+<polygon fill="black" stroke="black" points="81.18,-39.5 91.18,-36 81.18,-32.5 81.18,-39.5"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="creating-a-git-branch-and-checking-it-out" class="slide level2">
+<h2>Creating a git branch and checking it out</h2>
+<ul>
+<li>Create a new branch using <code>git branch my-new-branch</code></li>
+<li>Switch to the branch using <code>git switch my-new-branch</code></li>
+<li>Or, more conveniently, we can combine these actions into one:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch <span class="at">-c</span> my-new-branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<ul>
+<li>Make a change in your new branch by editing new.txt and committing the changes.</li>
+</ul>
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Older versions of git may need to use <code>checkout (-b)</code> instead of <code>switch (-c)</code></p>
+</div>
+</div>
+</div>
+</section>
+<section id="switching-and-merging-branches" class="slide level2">
+<h2>Switching and merging branches</h2>
+<ul>
+<li>Return to the main branch:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git switch main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Open the new.txt file, what’s inside?</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Now merge the new branch into main:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git merge my-new-branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>You can use <code>git switch -</code> as a shortcut for returning to the previous branch.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-and-when-to-use-branches" class="slide level2">
+<h2>Why and when to use branches?</h2>
+<p><em>Feature branching</em></p>
+<div class="cell" data-fig-height="50%" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="NaN" viewbox="0.00 0.00 692.00 206.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 202)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-202 688,-202 688,4 -4,4"></polygon>
+<!-- M1 -->
+<g id="node1" class="node">
+<title>M1</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="27" y="-94.8" font-family="Times,serif" font-size="14.00">Commit</text>
+</g>
+<!-- M2 -->
+<g id="node2" class="node">
+<title>M2</title>
+<ellipse fill="none" stroke="black" cx="117" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="117" y="-94.8" font-family="Times,serif" font-size="14.00">Commit</text>
+</g>
+<!-- M1&#45;&gt;M2 -->
+<g id="edge1" class="edge">
+<title>M1-&gt;M2</title>
+<path fill="none" stroke="black" d="M54.4,-99C62.39,-99 71.31,-99 79.82,-99"></path>
+<polygon fill="black" stroke="black" points="79.92,-102.5 89.92,-99 79.92,-95.5 79.92,-102.5"></polygon>
+</g>
+<!-- M3 -->
+<g id="node3" class="node">
+<title>M3</title>
+<ellipse fill="none" stroke="black" cx="207" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="207" y="-94.8" font-family="Times,serif" font-size="14.00">Commit</text>
+</g>
+<!-- M2&#45;&gt;M3 -->
+<g id="edge2" class="edge">
+<title>M2-&gt;M3</title>
+<path fill="none" stroke="black" d="M144.4,-99C152.39,-99 161.31,-99 169.82,-99"></path>
+<polygon fill="black" stroke="black" points="169.92,-102.5 179.92,-99 169.92,-95.5 169.92,-102.5"></polygon>
+</g>
+<!-- F1 -->
+<g id="node7" class="node">
+<title>F1</title>
+<ellipse fill="none" stroke="blue" cx="207" cy="-27" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="207" y="-22.8" font-family="Times,serif" font-size="14.00" fill="blue">Commit</text>
+</g>
+<!-- M2&#45;&gt;F1 -->
+<g id="edge6" class="edge">
+<title>M2-&gt;F1</title>
+<path fill="none" stroke="blue" d="M138.41,-82.3C150.07,-72.76 164.87,-60.65 177.65,-50.2"></path>
+<polygon fill="blue" stroke="blue" points="180.18,-52.65 185.7,-43.61 175.74,-47.23 180.18,-52.65"></polygon>
+</g>
+<!-- M4 -->
+<g id="node4" class="node">
+<title>M4</title>
+<ellipse fill="none" stroke="black" cx="477" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="477" y="-94.8" font-family="Times,serif" font-size="14.00">Merge</text>
+</g>
+<!-- M3&#45;&gt;M4 -->
+<g id="edge3" class="edge">
+<title>M3-&gt;M4</title>
+<path fill="none" stroke="black" d="M234.18,-99C282.22,-99 384.51,-99 439.39,-99"></path>
+<polygon fill="black" stroke="black" points="439.71,-102.5 449.71,-99 439.71,-95.5 439.71,-102.5"></polygon>
+</g>
+<!-- B1 -->
+<g id="node11" class="node">
+<title>B1</title>
+<ellipse fill="none" stroke="red" cx="297" cy="-162" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="297" y="-157.8" font-family="Times,serif" font-size="14.00" fill="red">Commit</text>
+</g>
+<!-- M3&#45;&gt;B1 -->
+<g id="edge11" class="edge">
+<title>M3-&gt;B1</title>
+<path fill="none" stroke="red" d="M229.3,-114.25C240.35,-122.16 254.04,-131.96 266.13,-140.61"></path>
+<polygon fill="red" stroke="red" points="264.42,-143.7 274.59,-146.67 268.5,-138 264.42,-143.7"></polygon>
+</g>
+<!-- M5 -->
+<g id="node5" class="node">
+<title>M5</title>
+<ellipse fill="none" stroke="black" cx="567" cy="-99" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="567" y="-94.8" font-family="Times,serif" font-size="14.00">Merge</text>
+</g>
+<!-- M4&#45;&gt;M5 -->
+<g id="edge4" class="edge">
+<title>M4-&gt;M5</title>
+<path fill="none" stroke="black" d="M504.4,-99C512.39,-99 521.31,-99 529.82,-99"></path>
+<polygon fill="black" stroke="black" points="529.92,-102.5 539.92,-99 529.92,-95.5 529.92,-102.5"></polygon>
+</g>
+<!-- main -->
+<g id="node6" class="node">
+<title>main</title>
+<text text-anchor="middle" x="657" y="-94.8" font-family="Times,serif" font-size="14.00">main</text>
+</g>
+<!-- M5&#45;&gt;main -->
+<g id="edge5" class="edge">
+<title>M5-&gt;main</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M594.4,-99C605.64,-99 618.72,-99 629.92,-99"></path>
+</g>
+<!-- F2 -->
+<g id="node8" class="node">
+<title>F2</title>
+<ellipse fill="none" stroke="blue" cx="297" cy="-30" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="297" y="-25.8" font-family="Times,serif" font-size="14.00" fill="blue">Commit</text>
+</g>
+<!-- F1&#45;&gt;F2 -->
+<g id="edge7" class="edge">
+<title>F1-&gt;F2</title>
+<path fill="none" stroke="blue" d="M234.4,-27.9C242.39,-28.17 251.31,-28.48 259.82,-28.77"></path>
+<polygon fill="blue" stroke="blue" points="259.81,-32.27 269.92,-29.11 260.04,-25.27 259.81,-32.27"></polygon>
+</g>
+<!-- F3 -->
+<g id="node9" class="node">
+<title>F3</title>
+<ellipse fill="none" stroke="blue" cx="387" cy="-34" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="387" y="-29.8" font-family="Times,serif" font-size="14.00" fill="blue">Commit</text>
+</g>
+<!-- F2&#45;&gt;F3 -->
+<g id="edge8" class="edge">
+<title>F2-&gt;F3</title>
+<path fill="none" stroke="blue" d="M324.4,-31.2C332.39,-31.56 341.31,-31.97 349.82,-32.36"></path>
+<polygon fill="blue" stroke="blue" points="349.77,-35.86 359.92,-32.81 350.09,-28.86 349.77,-35.86"></polygon>
+</g>
+<!-- F3&#45;&gt;M4 -->
+<g id="edge9" class="edge">
+<title>F3-&gt;M4</title>
+<path fill="none" stroke="blue" d="M409.3,-49.73C420.54,-58.04 434.51,-68.35 446.75,-77.39"></path>
+<polygon fill="blue" stroke="blue" points="444.77,-80.28 454.89,-83.41 448.93,-74.65 444.77,-80.28"></polygon>
+</g>
+<!-- feature -->
+<g id="node10" class="node">
+<title>feature</title>
+<text text-anchor="middle" x="477" y="-29.8" font-family="Times,serif" font-size="14.00" fill="blue">feature</text>
+</g>
+<!-- F3&#45;&gt;feature -->
+<g id="edge10" class="edge">
+<title>F3-&gt;feature</title>
+<path fill="none" stroke="blue" stroke-dasharray="1,5" d="M414.4,-34C425.64,-34 438.72,-34 449.92,-34"></path>
+</g>
+<!-- B2 -->
+<g id="node12" class="node">
+<title>B2</title>
+<ellipse fill="none" stroke="red" cx="387" cy="-166" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="387" y="-161.8" font-family="Times,serif" font-size="14.00" fill="red">Commit</text>
+</g>
+<!-- B1&#45;&gt;B2 -->
+<g id="edge12" class="edge">
+<title>B1-&gt;B2</title>
+<path fill="none" stroke="red" d="M324.4,-163.2C332.39,-163.56 341.31,-163.97 349.82,-164.36"></path>
+<polygon fill="red" stroke="red" points="349.77,-167.86 359.92,-164.81 350.09,-160.86 349.77,-167.86"></polygon>
+</g>
+<!-- B3 -->
+<g id="node13" class="node">
+<title>B3</title>
+<ellipse fill="none" stroke="red" cx="477" cy="-171" rx="27" ry="27"></ellipse>
+<text text-anchor="middle" x="477" y="-166.8" font-family="Times,serif" font-size="14.00" fill="red">Commit</text>
+</g>
+<!-- B2&#45;&gt;B3 -->
+<g id="edge13" class="edge">
+<title>B2-&gt;B3</title>
+<path fill="none" stroke="red" d="M414.4,-167.5C422.39,-167.95 431.31,-168.46 439.82,-168.94"></path>
+<polygon fill="red" stroke="red" points="439.74,-172.45 449.92,-169.52 440.13,-165.46 439.74,-172.45"></polygon>
+</g>
+<!-- B3&#45;&gt;M5 -->
+<g id="edge14" class="edge">
+<title>B3-&gt;M5</title>
+<path fill="none" stroke="red" d="M498.41,-154.3C510.07,-144.76 524.87,-132.65 537.65,-122.2"></path>
+<polygon fill="red" stroke="red" points="540.18,-124.65 545.7,-115.61 535.74,-119.23 540.18,-124.65"></polygon>
+</g>
+<!-- bugfix -->
+<g id="node14" class="node">
+<title>bugfix</title>
+<text text-anchor="middle" x="567" y="-166.8" font-family="Times,serif" font-size="14.00" fill="red">bugfix</text>
+</g>
+<!-- B3&#45;&gt;bugfix -->
+<g id="edge15" class="edge">
+<title>B3-&gt;bugfix</title>
+<path fill="none" stroke="red" stroke-dasharray="1,5" d="M504.4,-171C515.64,-171 528.72,-171 539.92,-171"></path>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li>Enables working on multiple tasks concurrently.</li>
+<li>Keeps work-in-progress code out of the main branch.</li>
+<li>Can regularly commit smaller changes without worry.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Keep branches short-lived. Long branches with large changes become harder and harder to merge.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="version-control-in-practice" class="title-slide slide level1 center">
+<h1>Version Control in practice</h1>
+
 </section>
 <section id="what-to-add-to-vc" class="slide level2">
 <h2>What to add to VC</h2>
-<p><br>
-</p>
 <ul>
 <li><p>DON’T do this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource console number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>git add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Our repository should only contain:</p>
 <ul>
 <li>Code/scripts</li>
@@ -387,15 +1163,47 @@ Throughout the rest of this session, we will walk through the steps that we can 
 </ul></li>
 </ul>
 </section>
-<section id="aside---testing-with-worktrees" class="slide level2">
-<h2>Aside - testing with worktrees</h2>
+<section id="atomic-commits" class="slide level2">
+<h2>Atomic commits</h2>
+<ul>
+<li>Commits should relate to specific logical changes
+<ul>
+<li>Makes it easier to understand what changed</li>
+<li>Can undo changes</li>
+<li>Easier to locate breaking changes (see <code>git bisect</code>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="atomic-commits-1" class="slide level2">
+<h2>Atomic commits</h2>
 <p><br>
 </p>
+<h3 id="bad">Bad</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--all</span> <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span>
+<span id="cb15-2"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> 25b29af Add branches content</span>
+<span id="cb15-3"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> 9df21b6 Move figures</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br>
+</p>
+<h3 id="still-bad">Still bad!</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--all</span> <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span>
+<span id="cb16-2"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> 25b29af Add branches content and add submodules to GH actions</span>
+<span id="cb16-3"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> 9df21b6 Move figures into <span class="kw">`</span><span class="ex">images</span><span class="kw">`</span> directory</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br>
+</p>
+<h3 id="better">Better!</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--all</span> <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span>
+<span id="cb17-2"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> 25b29af Add branches content</span>
+<span id="cb17-3"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> 16b1a94 Add submodules to GH actions</span>
+<span id="cb17-4"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> 9df21b6 Move all figures into <span class="kw">`</span><span class="ex">images</span><span class="kw">`</span> directory</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section></section>
+<section>
+<section id="aside---testing-with-worktrees" class="title-slide slide level1 center">
+<h1>Aside - testing with worktrees</h1>
 <ul>
 <li>git worktrees are like “local clones” of a repository</li>
 <li>Create a worktree:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="fu">git</span> worktree add <span class="at">-b</span> <span class="op">&lt;</span>new-branch-name<span class="op">&gt;</span> <span class="op">&lt;</span>path<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git worktree add <span class="at">-b</span> <span class="op">&lt;</span>new-branch-name<span class="op">&gt;</span> <span class="op">&lt;</span>path<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Will make a new directory, with only files that are tracked</li>
 <li>Can use as a cleanroom to ensure all dependencies are there</li>
@@ -492,7 +1300,7 @@ Throughout the rest of this session, we will walk through the steps that we can 
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/zenodo.png"></p>
+<p><img data-src="images/zenodo.png"></p>
 <figcaption>Example of a zenodo listing. Note how each version of the dataset has a different reference</figcaption>
 </figure>
 </div>
@@ -551,15 +1359,13 @@ Throughout the rest of this session, we will walk through the steps that we can 
 <li>Portable and cross-platform</li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="img/docker-logo-ocean-blue.svg"> <img data-src="img/apptainer.svg"> <img data-src="img/podman-logo-source.svg"></p>
+<p><img data-src="images/docker-logo-ocean-blue.svg"> <img data-src="images/apptainer.svg"> <img data-src="images/podman-logo-source.svg"></p>
 </div></div>
 </section>
 <section id="system-dependencies---nixguix" class="slide level2">
 <h2>System dependencies - Nix/Guix</h2>
 <p><br>
 </p>
-<div class="columns">
-<div class="column" style="width:60%;">
 <ul>
 <li>Declarative package managers</li>
 <li>Use pure functional languages to create environments
@@ -575,21 +1381,11 @@ Throughout the rest of this session, we will walk through the steps that we can 
 <ul>
 <li>All packages have defined and unchanging dependencies</li>
 </ul></li>
-<li>Handles all dependencies automatically
+<li>Handle all dependencies automatically
 <ul>
 <li>even linked libraries, so no hidden dependencies!</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:40%;">
-<p>How they differ:</p>
-<ul>
-<li>Nix language vs Guile scheme</li>
-<li>Guix package repository only hosts fully open source packages
-<ul>
-<li>Can be difficult when using vendor-locked software e.g.&nbsp;CUDA</li>
-</ul></li>
-</ul>
-</div></div>
 </section>
 <section id="dependencies-exercises" class="slide level2">
 <h2>Dependencies exercises</h2>
@@ -623,9 +1419,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>lapack library</li>
 <li>blas library</li>
 <li>sqlite</li>
-<li>curl</li>
 <li>glibc</li>
-<li>gcc/gfortran</li>
 <li>mpdecimal</li>
 <li>libffi</li>
 <li>…</li>
@@ -692,11 +1486,34 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </section>
 <section id="automation-and-reproducibility" class="slide level2">
 <h2>Automation and reproducibility</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li><p>Automating workflows tracks how research artifacts were actually produced</p></li>
-<li><p>Makes it easier for others to use and verify our work</p></li>
-<li><p>Results are more trustworthy</p></li>
+<li>Automating workflows tracks how research artifacts were actually produced</li>
+<li>Makes it easier for others to use and verify our work</li>
+<li>Results are more trustworthy</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+
+<pre class="mermaid mermaid-js">flowchart TB
+  I[Load Data] --&gt; A[Compute A]
+  I --&gt; B[Compute B]
+  B --&gt; C[Compute C]
+  A --&gt; D[Produce Plot]
+  B --&gt; E[Produce Plot]
+  C --&gt; F[Produce Plot]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="how-to-automate" class="slide level2">
 <h2>How to automate</h2>
@@ -716,6 +1533,20 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>Not as easy to invoke external programs</li>
 </ul></li>
 <li>Scripts should be written like any other code!</li>
+</ul>
+</section>
+<section id="workflow-engines" class="slide level2">
+<h2>Workflow engines</h2>
+<ul>
+<li>Sometimes workflows become more complicated than a script can handle</li>
+<li>Workflow engines allow you to declare your workflow, and then handle running it</li>
+<li>Some can also handle submitting HPC jobs (check your HPC docs/sysadmins first!)</li>
+<li>Examples:
+<ul>
+<li>Snakemake</li>
+<li>Cylc</li>
+<li>Common Workflow Language (CWL) implementations</li>
+</ul></li>
 </ul>
 </section>
 <section id="automation-exercises" class="slide level2">
@@ -761,6 +1592,8 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </section>
 <section id="a-very-short-intro-to-testing" class="slide level2">
 <h2>A very short intro to testing</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <h3 id="unit-tests">Unit tests</h3>
 <ul>
 <li>Test the smallest logical unit of the code</li>
@@ -768,6 +1601,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>Test functions for known results</li>
 <li>Compare to previously produced results</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <h3 id="integration-tests">Integration tests</h3>
 <ul>
 <li>Test that components work together</li>
@@ -775,6 +1609,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>Can use previous results to validate model</li>
 <li>Ensure no regression of results</li>
 </ul>
+</div></div>
 </section>
 <section id="adding-tests-to-a-project" class="slide level2">
 <h2>Adding tests to a project</h2>
@@ -806,6 +1641,185 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </ul>
 </section></section>
 <section>
+<section id="testing-with-pytest" class="title-slide slide level1 center">
+<h1>Testing with pytest</h1>
+
+</section>
+<section id="what-is-pytest" class="slide level2">
+<h2>What is pytest?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>A testing <em>framework</em> for python</li>
+<li>Makes it a lot easier to write tests</li>
+<li>Is used extensively by python packages</li>
+<li>Automatically discovers and runs tests</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/pytest.png" style="width:50%;"></p>
+</div></div>
+</section>
+<section id="pytest-basics" class="slide level2">
+<h2>pytest basics</h2>
+<p><br>
+</p>
+<ul>
+<li>Tests are .py files and live in a <code>tests/</code> directory</li>
+<li>Each test group is a function with prefix <code>test_</code></li>
+<li>Use the <code>assert</code> keyword to validate an expression is true</li>
+</ul>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>src/add.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-filename="src/add.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb20-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> a<span class="op">+</span>b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>tests/test.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-filename="tests/test.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb21-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> add(<span class="dv">0</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb21-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> add(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb21-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> add(<span class="dv">0</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb21-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> add(<span class="dv">1</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">2</span></span>
+<span id="cb21-6"><a href="" aria-hidden="true" tabindex="-1"></a>  ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="code-with-filename-file"><pre><strong>terminal</strong></pre></div>
+<div class="term-container">
+<span class="term-fg1">===================================== test session starts =====================================</span>
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tmp/example
+<span class="term-fg1">collected 1 item                                                                              </span>
+&nbsp;
+tests/test.py <span class="term-fg32">.                                                                         [100%]</span>
+&nbsp;
+<span class="term-fg32">====================================== </span><span class="term-fg32 term-fg1">1 passed</span><span class="term-fg32"> in 0.00s ======================================</span>
+</div>
+</div></div>
+</section>
+<section id="pytest-basics-1" class="slide level2">
+<h2>pytest basics</h2>
+<p>What if we implemented <code>add</code> wrong?</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>src/add,py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="src/add,py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb22-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> a<span class="op">-</span>b <span class="co"># Incorrect</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><br>
+</p>
+<div class="term-container">
+<span class="term-fg32 term-fg1">[jack@nixos:~]$</span> pytest tests/test.py
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tmp/example
+<span class="term-fg1">collected 1 item                                                                              </span>
+&nbsp;
+tests/test.py <span class="term-fg31">F                                                                         [100%]</span>
+&nbsp;
+========================================== FAILURES ===========================================
+<span class="term-fg31 term-fg1">__________________________________________ test_add ___________________________________________</span>
+&nbsp;
+    <span class="term-fgi94">def</span><span class="term-fgi90"> </span><span class="term-fgi92">test_add</span>():
+      <span class="term-fgi94">assert</span> add(<span class="term-fgi94">0</span>, <span class="term-fgi94">0</span>) == <span class="term-fgi94">0</span>
+      <span class="term-fgi94">assert</span> add(<span class="term-fgi94">1</span>, <span class="term-fgi94">0</span>) == <span class="term-fgi94">1</span>
+&gt;     <span class="term-fgi94">assert</span> add(<span class="term-fgi94">0</span>, <span class="term-fgi94">1</span>) == <span class="term-fgi94">1</span>
+<span class="term-fg31 term-fg1">E     assert -1 == 1</span>
+<span class="term-fg31 term-fg1">E      +  where -1 = add(0, 1)</span>
+&nbsp;
+<span class="term-fg31 term-fg1">tests/test.py</span>:7: AssertionError
+<span class="term-fg36 term-fg1">=================================== short test summary info ===================================</span>
+<span class="term-fg31">FAILED</span> tests/test.py::<span class="term-fg1">test_add</span> - assert -1 == 1
+<span class="term-fg31">====================================== </span><span class="term-fg31 term-fg1">1 failed</span><span class="term-fg31"> in 0.02s ======================================</span>
+</div>
+</section>
+<section id="parametrized-tests" class="slide level2">
+<h2>Parametrized tests</h2>
+<ul>
+<li>pytest implements a lot of useful tools to make writing tests easier</li>
+<li>One of these is test parametrization, which allows us to reuse tests for different inputs</li>
+<li>We only need to give the <code>pytest.mark.parametrize</code> decorator:
+<ul>
+<li>The names of the input variables</li>
+<li>A list of tuples of inputs</li>
+</ul></li>
+</ul>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>tests/test.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" data-filename="tests/test.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">@pytest.mark.parametrize</span>(<span class="st">"x,y,expected"</span>, [(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), (<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>)])</span>
+<span id="cb23-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add(x, y, expected):</span>
+<span id="cb23-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">assert</span> add(x, y) <span class="op">==</span> expected</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="what-to-test" class="slide level2">
+<h2>What to test</h2>
+<ul>
+<li>Beyond using fixed points, we can think about how a function should behave</li>
+<li>For example, our add function should have the following <em>properties</em>
+<ul>
+<li><code>add(x,0) == x</code></li>
+<li><code>add(x, y) == add(y, x)</code></li>
+<li><code>add(x, add(y, z)) == add(add(x, y), z)</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="writing-code-for-unit-testing" class="slide level2">
+<h2>Writing code for unit testing</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Unit testing forces us to write code that is minimal</li>
+<li>Decompose functions into their smallest logical unit</li>
+<li>Smaller functions are easier to test (and review!)
+<ul>
+<li>Fewer/simpler inputs</li>
+<li>Can help to think of edge cases</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>Easier to test this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> complicated_computation(data):</span>
+<span id="cb24-2"><a href="" aria-hidden="true" tabindex="-1"></a>  z <span class="op">=</span> computation_1(data.x, data.y)</span>
+<span id="cb24-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> computation_2(data.t, data.w, z)</span>
+<span id="cb24-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> computation_1(x, y):</span>
+<span id="cb24-6"><a href="" aria-hidden="true" tabindex="-1"></a>  result <span class="op">=</span> atan2(x, y)</span>
+<span id="cb24-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Maybe do something else here</span></span>
+<span id="cb24-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> result</span>
+<span id="cb24-9"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> computation_2(t, w, z):</span>
+<span id="cb24-11"><a href="" aria-hidden="true" tabindex="-1"></a>  result <span class="op">=</span> exp((w<span class="op">+</span>z)<span class="op">/</span>t)</span>
+<span id="cb24-12"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Maybe do something else here</span></span>
+<span id="cb24-13"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Than this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> complicated_computation(data):</span>
+<span id="cb25-2"><a href="" aria-hidden="true" tabindex="-1"></a>  z <span class="op">=</span> atan2(data.x, data.y)</span>
+<span id="cb25-3"><a href="" aria-hidden="true" tabindex="-1"></a>  z <span class="op">=</span> ...</span>
+<span id="cb25-4"><a href="" aria-hidden="true" tabindex="-1"></a>  result <span class="op">=</span> exp((data.w<span class="op">+</span>z)<span class="op">/</span>data.t)</span>
+<span id="cb25-5"><a href="" aria-hidden="true" tabindex="-1"></a>  result <span class="op">=</span> ...</span>
+<span id="cb25-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+</section>
+<section id="exercises" class="slide level2">
+<h2>Exercises</h2>
+<p>In the example repository, there is a file called ‘climate_model.py’. This file contains some functions that are used in ‘plot4.py’</p>
+<p>Task:</p>
+<ol type="1">
+<li>Write some basic tests for these functions (think about inputs that give known outputs)</li>
+<li>Think about what properties/behaviours these functions should have, and write tests for them</li>
+<li>Look at the other python files, and see if any functions can be extracted and tested</li>
+</ol>
+</section></section>
+<section>
 <section id="documentation" class="title-slide slide level1 center">
 <h1>Documentation</h1>
 
@@ -834,8 +1848,23 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="img/ftorch-readme.png"></p>
+<p><img data-src="images/ftorch-readme.png"></p>
 </div></div>
+</section>
+<section id="licences" class="slide level2">
+<h2>Licences</h2>
+<ul>
+<li>Licences are necessary for reproducibility!</li>
+<li>They define how code can be used/reused</li>
+<li>Enforce openness of code and data
+<ul>
+<li>FOSS licenses eg. GPL, MIT, BSD, etc</li>
+</ul></li>
+<li>Many explanations of which licence to use exist (and I’m not a lawyer!)
+<ul>
+<li><a href="https://choosealicense.com/">choosealicense.com</a></li>
+</ul></li>
+</ul>
 </section>
 <section id="comments" class="slide level2">
 <h2>Comments</h2>
@@ -848,6 +1877,42 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </ul></li>
 </ul>
 </section>
+<section id="docstrings" class="slide level2">
+<h2>Docstrings</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Docstrings are a description embedded in the definition of something
+<ul>
+<li>e.g.&nbsp;functions, classes</li>
+</ul></li>
+<li>Describe how to <em>use</em> something, rather than how it works</li>
+<li>Often standardised in a language
+<ul>
+<li>e.g.&nbsp;for Python <a href="https://peps.python.org/pep-0257/">PEP257</a></li>
+</ul></li>
+<li>There are various conventions for how to write/format them e.g.&nbsp;<a href="https://numpydoc.readthedocs.io/en/latest/format.html">numpy</a></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> energy_balanced_temperature(emissivity, albedo):</span>
+<span id="cb26-2"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb26-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    The temperature of Earth assuming 0D energy balance model</span></span>
+<span id="cb26-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb26-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb26-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    emissivity: float</span></span>
+<span id="cb26-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">        Effective emmissivity of the Earth</span></span>
+<span id="cb26-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    albedo: float</span></span>
+<span id="cb26-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">        Effective albedo of the Earth</span></span>
+<span id="cb26-11"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb26-13"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
+<span id="cb26-14"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    temperature: float</span></span>
+<span id="cb26-15"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">        Temperature of Earth's surface assuming 0D energy balance model [K]</span></span>
+<span id="cb26-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb26-17"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (SOLAR_CONSTANT <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> albedo) <span class="op">/</span> (<span class="fl">4.0</span> <span class="op">*</span> emissivity <span class="op">*</span> SIGMA))<span class="op">**</span><span class="fl">0.25</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+</section>
 <section id="generating-docs" class="slide level2">
 <h2>Generating Docs</h2>
 <ul>
@@ -855,19 +1920,6 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>Single source of truth</li>
 <li>Comments/Docstrings embedded in code</li>
 <li>Reduce separation between code and docs</li>
-</ul>
-</section>
-<section id="licences" class="slide level2">
-<h2>Licences</h2>
-<ul>
-<li>Licences are necessary for reproducibility!</li>
-<li>They define how code can be used/reused</li>
-<li>Enforce openness of code and data
-<ul>
-<li>FOSS licenses eg. GPL, MIT, BSD, etc</li>
-</ul></li>
-<li>Many explanations of which licence to use exist (and I’m not a lawyer!)</li>
-<li><a href="https://choosealicense.com/">choosealicense.com</a></li>
 </ul>
 </section>
 <section id="documentation-exercises" class="slide level2">
@@ -890,7 +1942,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <p>The FAIR principles were first introduced for data, and later adapted for research software (FAIR4RS) <sup>1</sup>.</p>
 <p>&nbsp;</p>
 <p>FAIR stands for</p>
-<p><img data-src="img/FAIR_data_principles.png" style="width:80.0%"></p>
+<p><img data-src="images/FAIR_data_principles.png" style="width:80.0%"></p>
 <aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.nature.com/articles/s41597-022-01710-x" class="uri">https://www.nature.com/articles/s41597-022-01710-x</a></p></li></ol></aside></section>
 <section id="findable" class="slide level2">
 <h2>Findable</h2>
@@ -942,7 +1994,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </ul>
 </section>
 <section id="uk-reproducibility-network" class="slide level2">
-<h2><img data-src="img/ukrnlogo.jpeg" style="width:1.5cm; vertical-align:bottom;"> UK Reproducibility Network</h2>
+<h2><img data-src="images/ukrnlogo.jpeg" style="width:1.5cm; vertical-align:bottom;"> UK Reproducibility Network</h2>
 <ul>
 <li><p>Peer-led consortium within the UK, international networks</p></li>
 <li><p>National Steering Group, local and institutional groups</p></li>
@@ -951,12 +2003,12 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/ukrn.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/ukrn.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </section>
 <section id="riot-science" class="slide level2">
-<h2><img data-src="img/riots.png" style="width: 5%"> RIOT Science</h2>
+<h2><img data-src="images/riots.png" style="width: 5%"> RIOT Science</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -965,7 +2017,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>Conferences, events, seminars open to everyone</li>
 </ul>
 </div><div class="column" style="width: 50%; fig-align: center; ">
-<p><img data-src="img/RIOT_principles.png" style="width: 80%; background-color: white;"></p>
+<p><img data-src="images/RIOT_principles.png" style="width: 80%; background-color: white;"></p>
 </div></div>
 </section>
 <section id="the-turing-way" class="slide level2">
@@ -982,13 +2034,13 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/theturingway-pathway.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/theturingway-pathway.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div></div>
 </section>
 <section id="acm-reproducibility-badges" class="slide level2">
-<h2><img data-src="img/acm.png" style="width:20%; vertical-align:text-bottom;"> ACM Reproducibility Badges</h2>
+<h2><img data-src="images/acm.png" style="width:20%; vertical-align:text-bottom;"> ACM Reproducibility Badges</h2>
 <p>&nbsp;</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -998,11 +2050,11 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>Rewards researchers for reproducibility efforts</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="img/acm_badges.jpg" style="width:90%; fig-align:center"></p>
+<p><img data-src="images/acm_badges.jpg" style="width:90%; fig-align:center"></p>
 </div></div>
 </section>
 <section id="sc-reproducibility-initiative" class="slide level2">
-<h2><img data-src="img/sc26.png" style="width:10.0%"> SC Reproducibility Initiative</h2>
+<h2><img data-src="images/sc26.png" style="width:10.0%"> SC Reproducibility Initiative</h2>
 <p>&nbsp;</p>
 <ul>
 <li><p>SC (formerly Supercomputing), The International Conference for High Performance Computing Networking, Storage, and Analysis</p></li>
@@ -1021,7 +2073,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </ul>
 </section>
 <section id="reprohack" class="slide level2">
-<h2><img data-src="img/reprohack_logo.jpg" style="width:5.0%"> ReproHack</h2>
+<h2><img data-src="images/reprohack_logo.jpg" style="width:5.0%"> ReproHack</h2>
 <ul>
 <li><p><strong>Challenge</strong>: Reproduce the results of a paper in one day!</p></li>
 <li><p>Started in 2016 and 2017 as satellite events of OpenCon (inspired by a course by Owen Petchey)</p></li>
@@ -1037,7 +2089,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 <li>Events listing</li>
 <li>Support through ReproHack Slack</li>
 </ul>
-<p><img data-src="img/reprohack-hub.png"></p>
+<p><img data-src="images/reprohack-hub.png"></p>
 </section>
 <section id="and-more" class="slide level2">
 <h2>And more!</h2>
@@ -1105,11 +2157,17 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
 </ul></li>
 </ul>
 </section>
-<section id="iccs-hacktoberfest-2026" class="slide level2">
-<h2>ICCS Hacktoberfest 2026</h2>
+<section id="iccs-summer-school-2027" class="slide level2">
+<h2>ICCS Summer School 2027</h2>
+<h3 id="confirmed-for-2806---0207">Confirmed for 28/06 - 02/07!</h3>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Register your interest here: <img data-src="images/iccs-ss-qr.svg"></p>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/iccs-summer-school-2026.jpg"></p>
+</div></div>
 
-
-<img data-src="img/iccs_hacktoberfest_2026.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+</section></section>
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -1126,6 +2184,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
   <script src="slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/reveal-attribution/attribution.js"></script>
   <script src="slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1141,14 +2200,14 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
@@ -1184,7 +2243,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
         respondToHashChanges: true,
 
         // Push each slide change to the browser history
-        history: true,
+        history: false,
 
         // Enable keyboard shortcuts for navigation
         keyboard: true,
@@ -1318,7 +2377,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealAttribution, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1402,7 +2461,8 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -1411,8 +2471,69 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -1426,6 +2547,7 @@ https://docs.xarray.dev/en/stable/getting-started-guide/installing.html</code></
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;

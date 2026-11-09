@@ -1,21 +1,18 @@
 # Version Control
 
-## Version Control
+{{< include Summer-school-Intro-Git/slides/_version_control.qmd >}}
 
-\
+{{< include Summer-school-Intro-Git/slides/_basics.qmd >}}
 
-- The first thing we should do is move our project into version control (VC)
-- This way we never lose the original state of the project
-- We can then try things without worrying about breaking anything!
-- This will also benefit any later development, so the sooner the better
+{{< include Summer-school-Intro-Git/slides/_branching.qmd >}}
+
+# Version Control in practice
 
 ## What to add to VC
 
-\
-
 - DON'T do this:
-  ```console
-  git add .
+  ``` bash
+  $ git add .
   ```
 
 - Our repository should only contain:
@@ -37,14 +34,50 @@ it will be true.
 - Use `.gitignore` to automatically ignore any unwanted files
   - e.g. build outputs
 
-## Aside - testing with worktrees
+
+## Atomic commits
+
+- Commits should relate to specific logical changes
+  - Makes it easier to understand what changed
+  - Can undo changes 
+  - Easier to locate breaking changes (see `git bisect`)
+
+## Atomic commits
 
 \
+
+### Bad
+``` bash
+$ git log --all --decorate --oneline --graph
+ * 25b29af Add branches content
+ * 9df21b6 Move figures
+```
+
+\
+
+### Still bad! 
+``` bash
+$ git log --all --decorate --oneline --graph
+ * 25b29af Add branches content and add submodules to GH actions
+ * 9df21b6 Move figures into `images` directory
+```
+
+\
+
+### Better!
+``` bash
+$ git log --all --decorate --oneline --graph
+ * 25b29af Add branches content
+ * 16b1a94 Add submodules to GH actions
+ * 9df21b6 Move all figures into `images` directory
+```
+
+# Aside - testing with worktrees
 
 - git worktrees are like "local clones" of a repository
 - Create a worktree:
 ``` bash
-git worktree add -b <new-branch-name> <path>
+$ git worktree add -b <new-branch-name> <path>
 ```
 - Will make a new directory, with only files that are tracked
 - Can use as a cleanroom to ensure all dependencies are there
