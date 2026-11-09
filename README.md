@@ -37,18 +37,12 @@ The exercises for this course are listed in the quarto markdown files which can 
 divided into those that can be answered/solved during the session, and also "Extension" tasks which can be worked on outside of the session.
 
 There is a small group of python scripts in the [problem](exercises/problem/) sub-directory. These act as an example of a non-reproducible workflow. The tasks involve understanding and 
-improving the reproducibility of the scripts using what is covered in the session. It is recommended to download these scripts to a seperate location on your local machine for 
+improving the reproducibility of the scripts using what is covered in the session. It is recommended to download these scripts to a separate location on your local machine for 
 this purpose.
-
-### Worked Solution
-
-Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
-These cover the tasks that require any modifications/improvements to the example workflow provided. They are not exhaustive, but use common technologies and approaches
-to solving the tasks.
 
 ### Mini ReproHack
 
-The [Mini ReproHack repository](https://github.com/Cambridge-ICCS/MiniReproHack) can be used before, alongside or after this course, to learn hands-on what makes software reproducible. It contains instructions on how do a [reproducibility hackathon](www.reprohack.org) by trying to reproduce the results of real climate science papers.
+The [Mini ReproHack repository](https://github.com/Cambridge-ICCS/MiniReproHack) can be used before, alongside or after this course, to learn hands-on what makes software reproducible. It contains instructions on how to do a [reproducibility hackathon](https://www.reprohack.org) by trying to reproduce the results of real climate science papers.
 
 
 ## Preparation and prerequisites
@@ -96,7 +90,7 @@ To contribute back to the repository please first
 [fork it](https://github.com/Cambridge-ICCS/ReproducibilityInComputingCourse/fork),
 make the necessary changes to fix the problem, and then open a pull request back to
 this repository clearly describing the changes you have made.
-We will then preform a review and merge once ready.
+We will then perform a review and merge once ready.
 
 If you would like support using these materials, adapting them to your needs, or
 delivering them please get in touch either via GitHub or via

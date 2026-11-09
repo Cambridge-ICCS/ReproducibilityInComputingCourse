@@ -29,7 +29,7 @@
   - e.g. add a "Dependencies" section to your README.md
 - Specify:
   - Versions of each dependency e.g. `numpy` 2.3.9
-  - Where/how to aquire the dependency
+  - Where/how to acquire the dependency
 
 ## How to declare data dependencies
 
